@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Browser — Chrome &amp; Edge (Windows)</title>
+<style>
+/* Monochrome by design: made for a black & white laser printer.
+   No gradients, no colour, no grey fills (they print as dither dots).
+   Hierarchy comes from weight, size, borders and italics only. */
+:root {
+  --paper: #FFFFFF; --ink: #000000; --rule: #000000; --desk: #E6E6E6; --toolbar: #333333;
+  --mono: ui-monospace, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+  --sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { --desk: #161616; --toolbar: #BBBBBB; }
+}
+:root[data-theme="dark"] { --desk: #161616; --toolbar: #BBBBBB; }
+@page { size: letter landscape; margin: 0.3in; }
+* { box-sizing: border-box; }
+html, body { margin: 0; background: var(--desk); color: var(--ink); font-family: var(--sans); }
+body { padding: 16px; }
+.toolbar { max-width: 10.4in; margin: 0 auto 12px; display: flex; gap: 12px; align-items: center;
+  font-size: 14px; color: var(--toolbar); flex-wrap: wrap; }
+.toolbar button { font: inherit; padding: 6px 14px; border: 1px solid #000; border-radius: 6px;
+  background: #fff; color: #000; cursor: pointer; }
+.toolbar a { color: inherit; }
+.page { width: 10.4in; margin: 0 auto 24px; background: var(--paper); color: var(--ink); padding: 0;
+  box-shadow: 0 1px 4px rgba(0,0,0,.25); font-size: var(--fs); line-height: 1.28;
+  display: flex; flex-direction: column; }
+.page.fit { height: 7.9in; overflow: hidden; }
+.head { display: flex; align-items: baseline; justify-content: space-between; gap: 1em;
+  border-bottom: 2.5pt solid var(--ink); padding: .1em .1em .25em; margin: 0 .6em; }
+.head h1 { margin: 0; font-size: 1.6em; letter-spacing: -.01em; font-weight: 800; }
+.head span { font-family: var(--mono); font-size: .85em; white-space: nowrap; }
+.intro { padding: .35em .7em 0; font-style: italic; }
+.intro p { margin: 0 0 .3em; }
+section:first-child h2 { margin-top: .1em; }
+.cols { column-count: var(--cols); column-gap: 1.3em; column-rule: .5pt solid var(--rule);
+  padding: .45em .7em .5em; }
+.page.fit .cols { flex: 1; min-height: 0; column-fill: auto; }
+section { break-inside: auto; }
+h2 { font-size: 1.12em; font-weight: 800; text-transform: uppercase; letter-spacing: .03em;
+  margin: .7em 0 .25em; padding-bottom: .1em; border-bottom: 1.5pt solid var(--ink); break-after: avoid; break-inside: avoid; }
+h3 { font-size: 1em; font-weight: 700; margin: .45em 0 .15em; text-decoration: underline;
+  text-underline-offset: .15em; break-after: avoid; break-inside: avoid; }
+p { margin: .2em 0 .35em; }
+p.note { border-left: 2.5pt solid var(--ink); padding-left: .5em; font-style: italic; }
+ul, ol { margin: .15em 0 .35em; padding-left: 1.3em; }
+li { margin: .08em 0; }
+table { width: 100%; table-layout: fixed; border-collapse: collapse; margin: .1em 0 .3em; }
+tr { break-inside: avoid; }
+td, th { overflow-wrap: break-word; vertical-align: top; padding: .16em .3em .16em 0; border-bottom: .75pt dotted var(--rule); text-align: left; }
+th { font-size: .8em; text-transform: uppercase; letter-spacing: .04em; font-weight: 700;
+  border-bottom: 1pt solid var(--rule); }
+td:first-child { width: 42%; }
+table.three td:first-child { width: 34%; }
+td:nth-child(3) { font-style: italic; }
+kbd, code { font-family: var(--mono); font-size: .9em; white-space: nowrap; color: var(--ink); }
+kbd { display: inline-block; padding: 0 .3em; border: .75pt solid var(--ink); border-bottom-width: 1.75pt;
+  border-radius: 3px; background: var(--paper); line-height: 1.25; font-weight: 600; }
+code { padding: 0 .1em; white-space: normal; word-break: break-word; border-bottom: .75pt dashed var(--ink); }
+.combo { white-space: normal; }
+.combo i { font-style: normal; padding: 0 .12em; font-size: .85em; }
+pre { font-family: var(--mono); font-size: .82em; border: .75pt solid var(--ink); padding: .4em .5em;
+  margin: .2em 0 .4em; white-space: pre-wrap; break-inside: avoid; }
+.big td { padding: .35em .5em .35em 0; }
+@media print {
+  html, body { background: #fff; padding: 0; }
+  .toolbar { display: none; }
+  .page { box-shadow: none; margin: 0; break-after: page; }
+  .page:last-child { break-after: auto; }
+}
+@media screen and (max-width: 10.9in) {
+  body { overflow-x: auto; }
+}
+</style>
+</head>
+<body>
+<div class="toolbar"><button onclick="window.print()">Print</button><span>Letter, landscape · margins: Default · scale 100% · black &amp; white is fine</span><a href="index.html">all sheets</a></div>
+<div class="page fit " style="--fs:8.75pt;--cols:4"><div class="head"><h1>Browser — Chrome &amp; Edge (Windows)</h1><span>Windows · shortcuts</span></div><div class="intro"><p>Most of your apps (SDP and friends) live in a browser, so this is where keyboard skill pays off most. Almost all of these are identical in Chrome, Edge and Firefox, and on Linux.</p></div><div class="cols"><section><h2>Tabs</h2><table><tbody><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>T</kbd></span></td><td>New tab</td></tr><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>W</kbd></span></td><td>Close tab</td></tr><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>Shift</kbd><i>+</i><wbr><kbd>T</kbd></span></td><td><b>Reopen</b> last closed tab (repeat to go further back)</td></tr><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>Tab</kbd></span> / <span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>Shift</kbd><i>+</i><wbr><kbd>Tab</kbd></span></td><td>Next / previous tab</td></tr><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>PgDn</kbd></span> / <span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>PgUp</kbd></span></td><td>Next / previous tab (alternative)</td></tr><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>1…8</kbd></span></td><td>Jump to tab 1–8</td></tr><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>9</kbd></span></td><td>Jump to <b>last</b> tab</td></tr><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>Shift</kbd><i>+</i><wbr><kbd>A</kbd></span></td><td>Search open tabs (Chrome)</td></tr><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>N</kbd></span></td><td>New window</td></tr><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>Shift</kbd><i>+</i><wbr><kbd>N</kbd></span></td><td>Incognito / InPrivate window (test logins without your cookies)</td></tr><tr><td>Right-click tab → <b>Pin</b></td><td>Keep SDP/Teams web pinned at the left; <span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>1</kbd></span> always gets it</td></tr></tbody></table></section><section><h2>Links</h2><table><tbody><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>click</kbd></span> / middle-click</td><td>Open in background tab</td></tr><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>Shift</kbd><i>+</i><wbr><kbd>click</kbd></span></td><td>Open in new tab and switch to it</td></tr><tr><td><span class="combo"><kbd>Shift</kbd><i>+</i><wbr><kbd>click</kbd></span></td><td>Open in new window</td></tr><tr><td><kbd>Tab</kbd> / <span class="combo"><kbd>Shift</kbd><i>+</i><wbr><kbd>Tab</kbd></span></td><td>Move focus link to link; <kbd>Enter</kbd> opens it</td></tr></tbody></table></section><section><h2>Navigation</h2><table><tbody><tr><td><span class="combo"><kbd>Alt</kbd><i>+</i><wbr><kbd>←</kbd></span> / <span class="combo"><kbd>Alt</kbd><i>+</i><wbr><kbd>→</kbd></span></td><td>Back / forward</td></tr><tr><td><kbd>F5</kbd> or <span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>R</kbd></span></td><td>Reload</td></tr><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>F5</kbd></span> or <span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>Shift</kbd><i>+</i><wbr><kbd>R</kbd></span></td><td>Hard reload (bypass cache — fixes "it looks broken")</td></tr><tr><td><kbd>Esc</kbd></td><td>Stop loading</td></tr><tr><td><kbd>Space</kbd> / <span class="combo"><kbd>Shift</kbd><i>+</i><wbr><kbd>Space</kbd></span></td><td>Page down / up</td></tr><tr><td><kbd>Home</kbd> / <kbd>End</kbd></td><td>Top / bottom of page</td></tr><tr><td><kbd>F11</kbd></td><td>Full screen</td></tr><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>+</kbd></span> / <span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>-</kbd></span> / <span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>0</kbd></span></td><td>Zoom in / out / reset</td></tr></tbody></table></section><section><h2>Address bar</h2><table><tbody><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>L</kbd></span>, <span class="combo"><kbd>Alt</kbd><i>+</i><wbr><kbd>D</kbd></span> or <kbd>F6</kbd></td><td>Focus address bar (and select the URL — <span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>C</kbd></span> copies it)</td></tr><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>K</kbd></span> or <span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>E</kbd></span></td><td>Search with default engine</td></tr><tr><td><span class="combo"><kbd>Alt</kbd><i>+</i><wbr><kbd>Enter</kbd></span></td><td>Open what you typed in a <b>new tab</b></td></tr><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>Enter</kbd></span></td><td>Add <code>www.</code> and <code>.com</code></td></tr><tr><td><span class="combo"><kbd>Shift</kbd><i>+</i><wbr><kbd>Delete</kbd></span> on a suggestion</td><td>Remove that autocomplete suggestion</td></tr><tr><td><kbd>keyword</kbd> + <kbd>Space</kbd></td><td>Use a <b>site search</b> shortcut (see below)</td></tr></tbody></table></section><section><h3>Site search shortcuts — the biggest time saver</h3><p>Settings → Search engine → Site search → <b>Add</b>. Put <code>%s</code> where the search term or ID goes.</p></section><section><table class="three"><thead><tr><th>Shortcut</th><th>Example URL</th><th>Use</th></tr></thead><tbody><tr><td><kbd>sdp</kbd></td><td>your SDP ticket URL with the number replaced by <code>%s</code></td><td><code>sdp 48211</code> → opens the ticket</td></tr><tr><td><kbd>kb</kbd></td><td>your KB search URL with <code>%s</code></td><td><code>kb vpn</code></td></tr><tr><td><kbd>ad</kbd></td><td>your user-lookup page with <code>%s</code></td><td><code>ad jsmith</code></td></tr></tbody></table></section><section><h2>Find &amp; select on the page</h2><table><tbody><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>F</kbd></span></td><td>Find</td></tr><tr><td><kbd>Enter</kbd> / <span class="combo"><kbd>Shift</kbd><i>+</i><wbr><kbd>Enter</kbd></span></td><td>Next / previous match (while find bar is open)</td></tr><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>G</kbd></span> / <span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>Shift</kbd><i>+</i><wbr><kbd>G</kbd></span></td><td>Next / previous match</td></tr><tr><td><kbd>Esc</kbd></td><td>Close find — the match stays <b>selected</b>, so <span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>C</kbd></span> copies it</td></tr><tr><td><kbd>F7</kbd></td><td><b>Caret browsing</b>: select page text with <span class="combo"><kbd>Shift</kbd><i>+</i><wbr><kbd>arrows</kbd></span> like a document</td></tr></tbody></table></section><section><h2>Forms (web apps like SDP)</h2><table><tbody><tr><td><kbd>Tab</kbd> / <span class="combo"><kbd>Shift</kbd><i>+</i><wbr><kbd>Tab</kbd></span></td><td>Next / previous field</td></tr><tr><td><kbd>Space</kbd></td><td>Toggle checkbox / press button</td></tr><tr><td><kbd>↑</kbd> <kbd>↓</kbd></td><td>Change radio button</td></tr><tr><td><span class="combo"><kbd>Alt</kbd><i>+</i><wbr><kbd>↓</kbd></span></td><td>Open a standard dropdown</td></tr><tr><td>Type letters</td><td>Jump/filter in a dropdown</td></tr><tr><td><kbd>Enter</kbd></td><td>Submit (careful — in many forms <kbd>Enter</kbd> in a one-line field submits)</td></tr><tr><td><kbd>↓</kbd> in a field</td><td>Show autofill suggestions; <span class="combo"><kbd>Shift</kbd><i>+</i><wbr><kbd>Delete</kbd></span> removes one</td></tr></tbody></table></section><section><h2>Useful for troubleshooting users' browsers</h2><table><tbody><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>Shift</kbd><i>+</i><wbr><kbd>Delete</kbd></span></td><td>Clear browsing data (cache/cookies — the classic fix)</td></tr><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>H</kbd></span></td><td>History</td></tr><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>J</kbd></span></td><td>Downloads</td></tr><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>D</kbd></span></td><td>Bookmark page</td></tr><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>Shift</kbd><i>+</i><wbr><kbd>B</kbd></span></td><td>Show / hide bookmarks bar</td></tr><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>Shift</kbd><i>+</i><wbr><kbd>O</kbd></span></td><td>Bookmark manager</td></tr><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>P</kbd></span></td><td>Print / save as PDF</td></tr><tr><td><kbd>F12</kbd> or <span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>Shift</kbd><i>+</i><wbr><kbd>I</kbd></span></td><td>Developer tools (console errors)</td></tr><tr><td><span class="combo"><kbd>Shift</kbd><i>+</i><wbr><kbd>Esc</kbd></span></td><td>Browser's own task manager (which tab is eating memory)</td></tr><tr><td><code>chrome://settings</code> / <code>edge://settings</code></td><td>Settings pages — type straight in the address bar</td></tr></tbody></table></section><section><p>Bookmark-bar trick: rename bookmarks to just an icon (blank name) to fit dozens on the bar, or put them in folders and use <span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>L</kbd></span>, type part of the name, and pick from suggestions.</p></section></div></div>
+</body>
+</html>

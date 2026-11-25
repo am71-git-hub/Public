@@ -1,0 +1,23 @@
+# systemd service for kijiji-bot.
+# Before installing, replace YOUR_USER with your Linux username (run `whoami`),
+# and fix the paths if you cloned the bot somewhere other than ~/kijiji-bot.
+# Check the Python path with `which python3`.
+
+[Unit]
+Description=Kijiji Auto-Apply Bot
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=YOUR_USER
+WorkingDirectory=/home/YOUR_USER/kijiji-bot
+ExecStart=/usr/bin/python3 /home/YOUR_USER/kijiji-bot/main.py
+Restart=always
+RestartSec=60
+StandardOutput=append:/home/YOUR_USER/kijiji-bot/logs/service.log
+StandardError=append:/home/YOUR_USER/kijiji-bot/logs/service.log
+Environment=PYTHONUNBUFFERED=1
+
+[Install]
+WantedBy=multi-user.target

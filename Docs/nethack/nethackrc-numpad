@@ -1,0 +1,28 @@
+# NetHack config — full keyboard with numpad
+# Movement: numpad 1-9 (5 = wait/search)
+#   7 8 9
+#   4 . 6
+#   1 2 3
+
+OPTIONS=number_pad:1
+
+# Display
+OPTIONS=showexp
+OPTIONS=showscore
+OPTIONS=time
+OPTIONS=lit_corridor
+OPTIONS=hilite_pet
+OPTIONS=color
+
+# Gameplay
+OPTIONS=autopickup
+OPTIONS=pickup_types:$!?=/
+OPTIONS=safe_pet
+OPTIONS=confirm
+OPTIONS=rest_on_space
+OPTIONS=pushweapon
+
+# Messages
+OPTIONS=msg_window:full
+OPTIONS=verbose
+OPTIONS=legacy

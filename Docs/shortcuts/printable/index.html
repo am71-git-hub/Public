@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Printable Shortcut Sheets</title>
+<style>
+/* Monochrome by design: made for a black & white laser printer.
+   No gradients, no colour, no grey fills (they print as dither dots).
+   Hierarchy comes from weight, size, borders and italics only. */
+:root {
+  --paper: #FFFFFF; --ink: #000000; --rule: #000000; --desk: #E6E6E6; --toolbar: #333333;
+  --mono: ui-monospace, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+  --sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { --desk: #161616; --toolbar: #BBBBBB; }
+}
+:root[data-theme="dark"] { --desk: #161616; --toolbar: #BBBBBB; }
+@page { size: letter landscape; margin: 0.3in; }
+* { box-sizing: border-box; }
+html, body { margin: 0; background: var(--desk); color: var(--ink); font-family: var(--sans); }
+body { padding: 16px; }
+.toolbar { max-width: 10.4in; margin: 0 auto 12px; display: flex; gap: 12px; align-items: center;
+  font-size: 14px; color: var(--toolbar); flex-wrap: wrap; }
+.toolbar button { font: inherit; padding: 6px 14px; border: 1px solid #000; border-radius: 6px;
+  background: #fff; color: #000; cursor: pointer; }
+.toolbar a { color: inherit; }
+.page { width: 10.4in; margin: 0 auto 24px; background: var(--paper); color: var(--ink); padding: 0;
+  box-shadow: 0 1px 4px rgba(0,0,0,.25); font-size: var(--fs); line-height: 1.28;
+  display: flex; flex-direction: column; }
+.page.fit { height: 7.9in; overflow: hidden; }
+.head { display: flex; align-items: baseline; justify-content: space-between; gap: 1em;
+  border-bottom: 2.5pt solid var(--ink); padding: .1em .1em .25em; margin: 0 .6em; }
+.head h1 { margin: 0; font-size: 1.6em; letter-spacing: -.01em; font-weight: 800; }
+.head span { font-family: var(--mono); font-size: .85em; white-space: nowrap; }
+.intro { padding: .35em .7em 0; font-style: italic; }
+.intro p { margin: 0 0 .3em; }
+section:first-child h2 { margin-top: .1em; }
+.cols { column-count: var(--cols); column-gap: 1.3em; column-rule: .5pt solid var(--rule);
+  padding: .45em .7em .5em; }
+.page.fit .cols { flex: 1; min-height: 0; column-fill: auto; }
+section { break-inside: auto; }
+h2 { font-size: 1.12em; font-weight: 800; text-transform: uppercase; letter-spacing: .03em;
+  margin: .7em 0 .25em; padding-bottom: .1em; border-bottom: 1.5pt solid var(--ink); break-after: avoid; break-inside: avoid; }
+h3 { font-size: 1em; font-weight: 700; margin: .45em 0 .15em; text-decoration: underline;
+  text-underline-offset: .15em; break-after: avoid; break-inside: avoid; }
+p { margin: .2em 0 .35em; }
+p.note { border-left: 2.5pt solid var(--ink); padding-left: .5em; font-style: italic; }
+ul, ol { margin: .15em 0 .35em; padding-left: 1.3em; }
+li { margin: .08em 0; }
+table { width: 100%; table-layout: fixed; border-collapse: collapse; margin: .1em 0 .3em; }
+tr { break-inside: avoid; }
+td, th { overflow-wrap: break-word; vertical-align: top; padding: .16em .3em .16em 0; border-bottom: .75pt dotted var(--rule); text-align: left; }
+th { font-size: .8em; text-transform: uppercase; letter-spacing: .04em; font-weight: 700;
+  border-bottom: 1pt solid var(--rule); }
+td:first-child { width: 42%; }
+table.three td:first-child { width: 34%; }
+td:nth-child(3) { font-style: italic; }
+kbd, code { font-family: var(--mono); font-size: .9em; white-space: nowrap; color: var(--ink); }
+kbd { display: inline-block; padding: 0 .3em; border: .75pt solid var(--ink); border-bottom-width: 1.75pt;
+  border-radius: 3px; background: var(--paper); line-height: 1.25; font-weight: 600; }
+code { padding: 0 .1em; white-space: normal; word-break: break-word; border-bottom: .75pt dashed var(--ink); }
+.combo { white-space: normal; }
+.combo i { font-style: normal; padding: 0 .12em; font-size: .85em; }
+pre { font-family: var(--mono); font-size: .82em; border: .75pt solid var(--ink); padding: .4em .5em;
+  margin: .2em 0 .4em; white-space: pre-wrap; break-inside: avoid; }
+.big td { padding: .35em .5em .35em 0; }
+@media print {
+  html, body { background: #fff; padding: 0; }
+  .toolbar { display: none; }
+  .page { box-shadow: none; margin: 0; break-after: page; }
+  .page:last-child { break-after: auto; }
+}
+@media screen and (max-width: 10.9in) {
+  body { overflow-x: auto; }
+}
+
+.idx { max-width: 44rem; margin: 0 auto; background: var(--paper); padding: 1.5rem 1.75rem; font-size: 15px;
+  box-shadow: 0 1px 4px rgba(0,0,0,.18); }
+.idx h1 { margin: 0 0 .25rem; font-size: 1.6rem; } .idx a { color: var(--ink); }
+.idx td:first-child { width: auto; } .idx td { padding: .45rem .5rem .45rem 0; }
+</style></head><body><div class="idx">
+<h1>Printable shortcut sheets</h1>
+<p>Open a sheet and press <kbd>Ctrl</kbd>+<kbd>P</kbd>. Settings: <b>Letter, Landscape</b>, margins <b>Default</b>,
+scale <b>100%</b>. Made for black &amp; white: no colour or grey fills.
+Or open <a href="all.html">all.html</a> to print every sheet in one go.</p>
+<table><thead><tr><th>Sheet</th><th>OS</th><th>Pages</th></tr></thead><tbody>
+<tr><td><a href="help-desk-top-15.html">The 15 to learn first</a></td><td>Windows</td><td>1</td></tr><tr><td><a href="windows-help-desk-data-entry.html">Help Desk Data Entry — Keyboard-First Cheat Sheet</a></td><td>Windows</td><td>2</td></tr><tr><td><a href="windows-text-selection-and-editing.html">Text Selection &amp; Editing — Windows</a></td><td>Windows</td><td>1</td></tr><tr><td><a href="windows-windows-desktop.html">Windows Desktop — Windows 10 / 11</a></td><td>Windows</td><td>1</td></tr><tr><td><a href="windows-browser-chrome-edge.html">Browser — Chrome &amp; Edge (Windows)</a></td><td>Windows</td><td>1</td></tr><tr><td><a href="windows-teams.html">Microsoft Teams (new Teams, Windows desktop app)</a></td><td>Windows</td><td>1</td></tr><tr><td><a href="windows-office.html">Outlook, Excel &amp; Word</a></td><td>Windows</td><td>1</td></tr><tr><td><a href="windows-power-tools.html">Power Tools — Going Beyond Built-in Shortcuts</a></td><td>Windows</td><td>1</td></tr><tr><td><a href="linux-terminal-bash.html">Terminal &amp; Bash — Linux</a></td><td>Linux</td><td>1</td></tr><tr><td><a href="linux-text-selection-and-clipboard.html">Text Selection &amp; Clipboard — Linux</a></td><td>Linux</td><td>1</td></tr><tr><td><a href="linux-gnome-desktop.html">GNOME Desktop (Ubuntu default)</a></td><td>Linux</td><td>1</td></tr>
+</tbody></table>
+<p class="note">Generated by <code>build.py</code> from the Markdown sheets. Edit the .md, then run
+<code>python3 build.py</code>.</p>
+</div></body></html>

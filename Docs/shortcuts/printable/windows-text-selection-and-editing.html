@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Text Selection &amp; Editing — Windows</title>
+<style>
+/* Monochrome by design: made for a black & white laser printer.
+   No gradients, no colour, no grey fills (they print as dither dots).
+   Hierarchy comes from weight, size, borders and italics only. */
+:root {
+  --paper: #FFFFFF; --ink: #000000; --rule: #000000; --desk: #E6E6E6; --toolbar: #333333;
+  --mono: ui-monospace, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+  --sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { --desk: #161616; --toolbar: #BBBBBB; }
+}
+:root[data-theme="dark"] { --desk: #161616; --toolbar: #BBBBBB; }
+@page { size: letter landscape; margin: 0.3in; }
+* { box-sizing: border-box; }
+html, body { margin: 0; background: var(--desk); color: var(--ink); font-family: var(--sans); }
+body { padding: 16px; }
+.toolbar { max-width: 10.4in; margin: 0 auto 12px; display: flex; gap: 12px; align-items: center;
+  font-size: 14px; color: var(--toolbar); flex-wrap: wrap; }
+.toolbar button { font: inherit; padding: 6px 14px; border: 1px solid #000; border-radius: 6px;
+  background: #fff; color: #000; cursor: pointer; }
+.toolbar a { color: inherit; }
+.page { width: 10.4in; margin: 0 auto 24px; background: var(--paper); color: var(--ink); padding: 0;
+  box-shadow: 0 1px 4px rgba(0,0,0,.25); font-size: var(--fs); line-height: 1.28;
+  display: flex; flex-direction: column; }
+.page.fit { height: 7.9in; overflow: hidden; }
+.head { display: flex; align-items: baseline; justify-content: space-between; gap: 1em;
+  border-bottom: 2.5pt solid var(--ink); padding: .1em .1em .25em; margin: 0 .6em; }
+.head h1 { margin: 0; font-size: 1.6em; letter-spacing: -.01em; font-weight: 800; }
+.head span { font-family: var(--mono); font-size: .85em; white-space: nowrap; }
+.intro { padding: .35em .7em 0; font-style: italic; }
+.intro p { margin: 0 0 .3em; }
+section:first-child h2 { margin-top: .1em; }
+.cols { column-count: var(--cols); column-gap: 1.3em; column-rule: .5pt solid var(--rule);
+  padding: .45em .7em .5em; }
+.page.fit .cols { flex: 1; min-height: 0; column-fill: auto; }
+section { break-inside: auto; }
+h2 { font-size: 1.12em; font-weight: 800; text-transform: uppercase; letter-spacing: .03em;
+  margin: .7em 0 .25em; padding-bottom: .1em; border-bottom: 1.5pt solid var(--ink); break-after: avoid; break-inside: avoid; }
+h3 { font-size: 1em; font-weight: 700; margin: .45em 0 .15em; text-decoration: underline;
+  text-underline-offset: .15em; break-after: avoid; break-inside: avoid; }
+p { margin: .2em 0 .35em; }
+p.note { border-left: 2.5pt solid var(--ink); padding-left: .5em; font-style: italic; }
+ul, ol { margin: .15em 0 .35em; padding-left: 1.3em; }
+li { margin: .08em 0; }
+table { width: 100%; table-layout: fixed; border-collapse: collapse; margin: .1em 0 .3em; }
+tr { break-inside: avoid; }
+td, th { overflow-wrap: break-word; vertical-align: top; padding: .16em .3em .16em 0; border-bottom: .75pt dotted var(--rule); text-align: left; }
+th { font-size: .8em; text-transform: uppercase; letter-spacing: .04em; font-weight: 700;
+  border-bottom: 1pt solid var(--rule); }
+td:first-child { width: 42%; }
+table.three td:first-child { width: 34%; }
+td:nth-child(3) { font-style: italic; }
+kbd, code { font-family: var(--mono); font-size: .9em; white-space: nowrap; color: var(--ink); }
+kbd { display: inline-block; padding: 0 .3em; border: .75pt solid var(--ink); border-bottom-width: 1.75pt;
+  border-radius: 3px; background: var(--paper); line-height: 1.25; font-weight: 600; }
+code { padding: 0 .1em; white-space: normal; word-break: break-word; border-bottom: .75pt dashed var(--ink); }
+.combo { white-space: normal; }
+.combo i { font-style: normal; padding: 0 .12em; font-size: .85em; }
+pre { font-family: var(--mono); font-size: .82em; border: .75pt solid var(--ink); padding: .4em .5em;
+  margin: .2em 0 .4em; white-space: pre-wrap; break-inside: avoid; }
+.big td { padding: .35em .5em .35em 0; }
+@media print {
+  html, body { background: #fff; padding: 0; }
+  .toolbar { display: none; }
+  .page { box-shadow: none; margin: 0; break-after: page; }
+  .page:last-child { break-after: auto; }
+}
+@media screen and (max-width: 10.9in) {
+  body { overflow-x: auto; }
+}
+</style>
+</head>
+<body>
+<div class="toolbar"><button onclick="window.print()">Print</button><span>Letter, landscape · margins: Default · scale 100% · black &amp; white is fine</span><a href="index.html">all sheets</a></div>
+<div class="page fit " style="--fs:10.0pt;--cols:4"><div class="head"><h1>Text Selection &amp; Editing — Windows</h1><span>Windows · shortcuts</span></div><div class="intro"><p>These work in almost every Windows text box: browsers, web forms, Teams, Outlook, Word, Notepad, SDP. Master this page and every app gets faster.</p></div><div class="cols"><section><h2>Moving the cursor</h2><table><tbody><tr><td><kbd>←</kbd> <kbd>→</kbd></td><td>One character</td></tr><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>←</kbd></span> / <span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>→</kbd></span></td><td>Start of previous / next word</td></tr><tr><td><kbd>Home</kbd> / <kbd>End</kbd></td><td>Start / end of line</td></tr><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>Home</kbd></span> / <span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>End</kbd></span></td><td>Start / end of document or box</td></tr><tr><td><kbd>↑</kbd> <kbd>↓</kbd></td><td>Line up / down</td></tr><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>↑</kbd></span> / <span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>↓</kbd></span></td><td>Previous / next paragraph (Word, many editors)</td></tr><tr><td><kbd>Page Up</kbd> / <kbd>Page Down</kbd></td><td>One screen up / down</td></tr></tbody></table></section><section><h2>Selecting — just add <kbd>Shift</kbd></h2><p>Any movement key + <kbd>Shift</kbd> selects instead of just moving.</p></section><section><table><tbody><tr><td><span class="combo"><kbd>Shift</kbd><i>+</i><wbr><kbd>←/→</kbd></span></td><td>One character</td></tr><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>Shift</kbd><i>+</i><wbr><kbd>←</kbd></span></td><td>Word <b>before</b> the cursor</td></tr><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>Shift</kbd><i>+</i><wbr><kbd>→</kbd></span></td><td>Word <b>after</b> the cursor</td></tr><tr><td><span class="combo"><kbd>Shift</kbd><i>+</i><wbr><kbd>Home</kbd></span></td><td>Back to start of line</td></tr><tr><td><span class="combo"><kbd>Shift</kbd><i>+</i><wbr><kbd>End</kbd></span></td><td>Forward to end of line</td></tr><tr><td><span class="combo"><kbd>Shift</kbd><i>+</i><wbr><kbd>↑/↓</kbd></span></td><td>Up / down a line</td></tr><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>Shift</kbd><i>+</i><wbr><kbd>Home/End</kbd></span></td><td>To start / end of document</td></tr><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>Shift</kbd><i>+</i><wbr><kbd>↑/↓</kbd></span></td><td>To start / end of paragraph (Word)</td></tr><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>A</kbd></span></td><td>Everything</td></tr></tbody></table></section><section><p><b>Whole line:</b> <kbd>Home</kbd> then <span class="combo"><kbd>Shift</kbd><i>+</i><wbr><kbd>End</kbd></span>. <b>Whole word you're inside:</b> <span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>←</kbd></span> then <span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>Shift</kbd><i>+</i><wbr><kbd>→</kbd></span>.</p></section><section><h2>Mouse + keyboard selection</h2><table><tbody><tr><td>Double-click</td><td>Word</td></tr><tr><td>Triple-click</td><td>Line / paragraph (whole box in single-line inputs)</td></tr><tr><td>Double-click + drag</td><td>Word by word</td></tr><tr><td>Triple-click + drag</td><td>Paragraph by paragraph</td></tr><tr><td>Click, then <span class="combo"><kbd>Shift</kbd><i>+</i><wbr><kbd>click</kbd></span></td><td>Everything between the two points</td></tr><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>click</kbd></span> (Word)</td><td>Whole sentence</td></tr><tr><td>Click in left margin (Word)</td><td>Whole line; double-click margin = paragraph; triple = document</td></tr><tr><td><span class="combo"><kbd>Alt</kbd><i>+</i><wbr><kbd>drag</kbd></span> (Word) / <span class="combo"><kbd>Shift</kbd><i>+</i><wbr><kbd>Alt</kbd><i>+</i><wbr><kbd>drag</kbd></span> (VS Code)</td><td>Rectangular <b>column</b> block</td></tr><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>drag-select</kbd></span> (Word, some editors)</td><td>Add a second, separate selection</td></tr></tbody></table></section><section><h2>Deleting</h2><table><tbody><tr><td><kbd>Backspace</kbd> / <kbd>Delete</kbd></td><td>Character before / after</td></tr><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>Backspace</kbd></span></td><td>Word before</td></tr><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>Delete</kbd></span></td><td>Word after</td></tr><tr><td><span class="combo"><kbd>Shift</kbd><i>+</i><wbr><kbd>Home</kbd></span>, <kbd>Delete</kbd></td><td>Everything before the cursor on this line</td></tr><tr><td><span class="combo"><kbd>Shift</kbd><i>+</i><wbr><kbd>End</kbd></span>, <kbd>Delete</kbd></td><td>Everything after the cursor on this line</td></tr></tbody></table></section><section><h2>Clipboard</h2><table><tbody><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>C</kbd></span> / <kbd>X</kbd> / <kbd>V</kbd></td><td>Copy / cut / paste</td></tr><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>Shift</kbd><i>+</i><wbr><kbd>V</kbd></span></td><td>Paste as plain text (browsers, Teams, Microsoft 365)</td></tr><tr><td><span class="combo"><kbd>Win</kbd><i>+</i><wbr><kbd>V</kbd></span></td><td>Clipboard history (turn on the first time)</td></tr><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>Insert</kbd></span> / <span class="combo"><kbd>Shift</kbd><i>+</i><wbr><kbd>Insert</kbd></span></td><td>Old-school copy / paste (handy in some terminals and remote sessions)</td></tr></tbody></table></section><section><h2>Undo / redo / find</h2><table><tbody><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>Z</kbd></span></td><td>Undo</td></tr><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>Y</kbd></span> (or <span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>Shift</kbd><i>+</i><wbr><kbd>Z</kbd></span>)</td><td>Redo</td></tr><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>F</kbd></span></td><td>Find</td></tr><tr><td><kbd>F3</kbd> / <span class="combo"><kbd>Shift</kbd><i>+</i><wbr><kbd>F3</kbd></span></td><td>Next / previous match (many apps)</td></tr><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>H</kbd></span></td><td>Find &amp; replace (Word, Notepad, Excel, editors)</td></tr></tbody></table></section><section><h2>Formatting (where formatting exists)</h2><table><tbody><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>B</kbd></span> / <kbd>I</kbd> / <kbd>U</kbd></td><td>Bold / italic / underline</td></tr><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>K</kbd></span></td><td>Insert link</td></tr><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>Shift</kbd><i>+</i><wbr><kbd>7</kbd></span> / <kbd>8</kbd></td><td>Numbered / bulleted list (many web editors, Teams)</td></tr><tr><td><span class="combo"><kbd>Shift</kbd><i>+</i><wbr><kbd>F3</kbd></span> (Word)</td><td>Cycle UPPER / lower / Title case</td></tr><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>Space</kbd></span> (Word)</td><td>Clear character formatting</td></tr></tbody></table></section><section><h2>Context menu without the mouse</h2><p><span class="combo"><kbd>Shift</kbd><i>+</i><wbr><kbd>F10</kbd></span> (or the <b>Menu</b> key next to right <kbd>Ctrl</kbd>) = right-click at the cursor. Then use the arrow keys or the underlined letter.</p></section></div></div>
+</body>
+</html>

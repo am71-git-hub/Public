@@ -1,0 +1,17 @@
+# systemd *user* service: keeps the G1 practice page running on this computer.
+# Setup and explanation: tutorials/05-run-it-all-the-time.md
+#
+# 1. Change the path after --directory to where YOUR copy of driving-test/site is.
+#    (%h means your home folder.)
+# 2. Change 8095 if that port is already in use.
+# 3. Remove "--bind 127.0.0.1" to let other devices on your network open it.
+[Unit]
+Description=G1 practice page (http://localhost:8095)
+
+[Service]
+ExecStart=/usr/bin/python3 -m http.server 8095 --bind 127.0.0.1 --directory %h/Public/Docs/driving-test/site
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=default.target

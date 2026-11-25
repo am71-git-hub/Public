@@ -1,0 +1,194 @@
+{
+  "title": "R0 · Every number in one place",
+  "intro": [
+    "These are the exact numbers from the Official MTO Driver's Handbook, grouped by kind.",
+    "Study one group at a time. Cover the number column and say the answer out loud.",
+    "In the web app, the **Flashcards** for the Rules half drill these same facts."
+  ],
+  "groups": [
+    {
+      "title": "Distances: metres",
+      "facts": [
+        {"value": "1 m", "fact": "Minimum space when you pass a cyclist (where practical)", "cat": "R7"},
+        {"value": "1 m", "fact": "How far from the curb or parked cars cyclists usually ride", "cat": "R7"},
+        {"value": "2 m", "fact": "Stay at least this far behind a streetcar's rear doors when passengers get on or off", "cat": "R7"},
+        {"value": "3 m", "fact": "Don't park within this distance of a fire hydrant", "cat": "R9"},
+        {"value": "3 m", "fact": "How far a snow plow's wing can stick out to the right", "cat": "R11"},
+        {"value": "4 m", "fact": "You should be able to see the ground this far in front of your car (seat position)", "cat": "R8"},
+        {"value": "5 m", "fact": "Stop at least this far from the nearest rail or gate when a train is coming", "cat": "R5"},
+        {"value": "6 m", "fact": "Don't park within this distance of a public entrance to a hotel, theatre or public hall (when open)", "cat": "R9"},
+        {"value": "9 m", "fact": "Don't park within this distance of an intersection", "cat": "R9"},
+        {"value": "15 m", "fact": "Don't park within this distance of an intersection with traffic lights", "cat": "R9"},
+        {"value": "15 m", "fact": "Don't park within this distance of the nearest rail of a level railway crossing", "cat": "R9"},
+        {"value": "20 m", "fact": "Stop at least this far behind a school bus with red lights flashing", "cat": "R5"},
+        {"value": "30 m", "fact": "No passing any vehicle within this distance of a pedestrian crossover", "cat": "R5"},
+        {"value": "30 m", "fact": "No passing left of the centre line within this distance of a bridge, viaduct or tunnel", "cat": "R6"},
+        {"value": "60 m", "fact": "Use low beams when you're following this close behind another vehicle", "cat": "R11"},
+        {"value": "100 m", "fact": "Don't park on a bridge or within this distance of one", "cat": "R9"},
+        {"value": "110 m", "fact": "Headlights must light up objects this far away", "cat": "R11"},
+        {"value": "125 m", "fact": "Don't park anywhere you can't see this far in both directions", "cat": "R9"},
+        {"value": "150 m", "fact": "Switch to low beams within this distance of an oncoming vehicle", "cat": "R11"},
+        {"value": "150 m", "fact": "Headlights on when you can't clearly see people or vehicles this far away", "cat": "R11"},
+        {"value": "150 m", "fact": "You need to see at least this far both ways to make a U-turn", "cat": "R6"},
+        {"value": "150 m", "fact": "Illegal to follow a fire vehicle answering an alarm closer than this", "cat": "R7"},
+        {"value": "150 m", "fact": "Snow plows' flashing blue lights can be seen from this far", "cat": "R11"},
+        {"value": "2 km", "fact": "A train under full emergency braking can need up to this far to stop", "cat": "R5"},
+        {"value": "40 m", "fact": "A long commercial vehicle (LCV, double trailer) can be up to this long", "cat": "R7"}
+      ]
+    },
+    {
+      "title": "Small measurements",
+      "facts": [
+        {"value": "30 cm", "fact": "Roadside stop: no more than about this far from the curb or edge", "cat": "R9"},
+        {"value": "1.5 mm", "fact": "Replace tires when the tread is less than this deep", "cat": "R13"},
+        {"value": "2.5 cm (1 in.)", "fact": "An installed child car seat should move no more than this", "cat": "R12"},
+        {"value": "145 cm (4'9\")", "fact": "A child this tall can use a seatbelt instead of a booster", "cat": "R12"},
+        {"value": "1½ × your car", "fact": "Length of space you need to parallel park", "cat": "R9"}
+      ]
+    },
+    {
+      "title": "Time: seconds, hours, days",
+      "facts": [
+        {"value": "2 seconds", "fact": "Minimum following distance (ideal conditions)", "cat": "R8"},
+        {"value": "5 seconds", "fact": "Check your mirrors about this often", "cat": "R8"},
+        {"value": "15–20 seconds", "fact": "How far ahead to look on a freeway", "cat": "R10"},
+        {"value": "10 seconds", "fact": "Turn your engine off if you'll be parked longer than this", "cat": "R13"},
+        {"value": "½ hour", "fact": "Headlights on from this long before sunset until this long after sunrise", "cat": "R11"},
+        {"value": "Midnight – 5 a.m.", "fact": "G1 drivers may not drive during these hours", "cat": "R1"},
+        {"value": "24 hours", "fact": "Roadside suspension for a young (21 and under) or novice driver caught with alcohol (handbook)", "cat": "R3"},
+        {"value": "48 hours", "fact": "Cancel a road test with less notice than this and you lose the fee", "cat": "R1"},
+        {"value": "6 days", "fact": "Tell the Ministry within this many days of changing your name or address", "cat": "R1"},
+        {"value": "10 days", "fact": "Minimum wait between road tests", "cat": "R1"},
+        {"value": "30 days", "fact": "New Ontario residents must register their vehicles within this time", "cat": "R13"},
+        {"value": "60 days", "fact": "New Ontario residents may use their old licence for this long", "cat": "R1"}
+      ]
+    },
+    {
+      "title": "Time: months and years",
+      "facts": [
+        {"value": "12 months", "fact": "Minimum time at G1", "cat": "R1"},
+        {"value": "8 months", "fact": "Minimum time at G1 if you pass an approved driver-education course", "cat": "R1"},
+        {"value": "12 months", "fact": "Minimum time at G2", "cat": "R1"},
+        {"value": "20 months", "fact": "Shortest possible time to finish graduated licensing", "cat": "R1"},
+        {"value": "5 years", "fact": "Time limit to finish graduated licensing", "cat": "R1"},
+        {"value": "4 years", "fact": "Driving experience a G1's accompanying driver needs", "cat": "R1"},
+        {"value": "6 months", "fact": "G2 drivers 19 and under: only 1 young passenger (19 or under) midnight–5 a.m. for this long", "cat": "R1"},
+        {"value": "3 months", "fact": "Visitors staying longer than this need an International Driver's Permit", "cat": "R1"},
+        {"value": "1 year", "fact": "You can renew an expired licence within this time without tests", "cat": "R1"},
+        {"value": "3 years", "fact": "Expired, suspended or cancelled longer than this: start graduated licensing again", "cat": "R1"},
+        {"value": "2 years", "fact": "Drivers 80 and older renew this often", "cat": "R1"},
+        {"value": "2 years", "fact": "Demerit points stay on your record this long (from the offence date)", "cat": "R2"},
+        {"value": "10 years", "fact": "Criminal Code driving convictions stay on your record at least this long", "cat": "R3"},
+        {"value": "10 years", "fact": "Tires shouldn't be older than this", "cat": "R13"}
+      ]
+    },
+    {
+      "title": "Speeds",
+      "facts": [
+        {"value": "50 km/h", "fact": "Speed limit in cities, towns and villages when no sign is posted", "cat": "R8"},
+        {"value": "80 km/h", "fact": "Speed limit outside towns when no sign is posted", "cat": "R8"},
+        {"value": "over 80 km/h", "fact": "G1s may not drive on 400-series highways with a limit this high", "cat": "R1"},
+        {"value": "over 80 km/h", "fact": "Illegal to reverse on a divided road with a speed limit this high", "cat": "R6"},
+        {"value": "40 km/h or less", "fact": "Speed of vehicles with the orange slow-moving vehicle sign", "cat": "R7"},
+        {"value": "50 km/h", "fact": "Test your brakes at this speed after driving through water", "cat": "R11"},
+        {"value": "150 km/h", "fact": "Driving this fast anywhere counts as stunt driving", "cat": "R3"},
+        {"value": "40 km/h over", "fact": "Stunt driving on roads with a limit under 80 km/h", "cat": "R3"},
+        {"value": "50 km/h over", "fact": "Stunt driving on any road", "cat": "R3"}
+      ]
+    },
+    {
+      "title": "Demerit points",
+      "facts": [
+        {"value": "2 · 6 · 9", "fact": "New driver: warning letter · second warning · 60-day suspension", "cat": "R2"},
+        {"value": "6 · 9 · 15", "fact": "Full licence: warning letter · second warning · 30-day suspension", "cat": "R2"},
+        {"value": "60 days", "fact": "Suspension for a new driver who reaches 9 points", "cat": "R2"},
+        {"value": "30 days", "fact": "Suspension for a fully licensed driver who reaches 15 points", "cat": "R2"},
+        {"value": "4", "fact": "A new driver's points are reduced to this after the suspension", "cat": "R2"},
+        {"value": "7", "fact": "A full driver's points are reduced to this after the suspension", "cat": "R2"},
+        {"value": "7 points", "fact": "Leaving the scene of a collision, or failing to stop for police", "cat": "R2"},
+        {"value": "6 points", "fact": "Careless driving, racing, 50+ over (or 40+ over under 80), not stopping for a school bus", "cat": "R2"},
+        {"value": "5 points", "fact": "Bus driver not stopping at an unprotected railway crossing", "cat": "R2"},
+        {"value": "4 points", "fact": "30–49 km/h over, following too closely, not stopping at a pedestrian crossover", "cat": "R2"},
+        {"value": "3 points", "fact": "16–29 over, phone, red light, stop sign, failing to yield, failing to report a collision", "cat": "R2"},
+        {"value": "2 points", "fact": "No seatbelt, not signalling, improper turn, not dimming headlights, not sharing the road", "cat": "R2"}
+      ]
+    },
+    {
+      "title": "Suspensions & penalties",
+      "facts": [
+        {"value": "90 days", "fact": "Immediate suspension for BAC over .08 or refusing a test", "cat": "R3"},
+        {"value": "7 days", "fact": "Vehicle impoundment for BAC over .08, or driving while suspended", "cat": "R3"},
+        {"value": "45 days", "fact": "Minimum impoundment for driving while suspended for a Criminal Code offence", "cat": "R3"},
+        {"value": "3 · 7 · 30 days", "fact": "Warn-range suspensions in the handbook: 1st · 2nd · 3rd time (ontario.ca now: 7 · 14 · 30)", "cat": "R3"},
+        {"value": "30 · 90 days · cancel", "fact": "New driver escalating sanctions: 1st · 2nd · 3rd", "cat": "R3"},
+        {"value": "30 days", "fact": "New driver who doesn't have a working seatbelt for every passenger can lose their licence at least this long", "cat": "R12"},
+        {"value": "1 year", "fact": "Suspension for a first Criminal Code driving conviction", "cat": "R3"},
+        {"value": "5 years", "fact": "Minimum suspension for failing to stop for police", "cat": "R3"},
+        {"value": "6 months", "fact": "Added to your suspension if you're convicted of driving while suspended", "cat": "R3"},
+        {"value": "30 days + 14 days", "fact": "Stunt driving at roadside: licence suspension + vehicle impoundment", "cat": "R3"},
+        {"value": "3 · 7 · 30 days", "fact": "Distracted driving suspensions for full licence: 1st · 2nd · 3rd", "cat": "R3"}
+      ]
+    },
+    {
+      "title": "Money",
+      "facts": [
+        {"value": "$5,000", "fact": "Report a collision to police if damage is over this (or anyone is hurt)", "cat": "R11"},
+        {"value": "$615", "fact": "Distracted driving fine if settled out of court", "cat": "R3"},
+        {"value": "up to $1,000", "fact": "Distracted driving fine (1st conviction) if you fight it in court and lose", "cat": "R3"},
+        {"value": "up to $2,000", "fact": "Careless driving fine", "cat": "R3"},
+        {"value": "$2,000 – $10,000", "fact": "Stunt driving fine", "cat": "R3"},
+        {"value": "up to $50,000", "fact": "Impaired driving fine, depending on prior convictions", "cat": "R3"},
+        {"value": "doubled", "fact": "Speeding fines in a construction zone when workers are present", "cat": "R12"}
+      ]
+    },
+    {
+      "title": "Alcohol (blood alcohol concentration)",
+      "facts": [
+        {"value": "0 (zero)", "fact": "Required for G1, G2 and all drivers 21 and under", "cat": "R3"},
+        {"value": "under .05", "fact": "Required for a G1's accompanying driver", "cat": "R1"},
+        {"value": ".05 to .08", "fact": "The \"warn range\"", "cat": "R3"},
+        {"value": "over .08", "fact": "Criminal Code offence (80 mg of alcohol in 100 mL of blood)", "cat": "R3"}
+      ]
+    },
+    {
+      "title": "Ages, people & weights",
+      "facts": [
+        {"value": "16", "fact": "Minimum age to apply for a G1", "cat": "R1"},
+        {"value": "21 and under", "fact": "Must have zero blood alcohol, any licence class", "cat": "R3"},
+        {"value": "19 and under", "fact": "G2 drivers this age have passenger limits from midnight to 5 a.m.", "cat": "R1"},
+        {"value": "1 → 3", "fact": "Young passengers a G2 driver (19 or under) may carry midnight–5 a.m.: first 6 months → after", "cat": "R1"},
+        {"value": "80", "fact": "Drivers this age and older renew every 2 years", "cat": "R1"},
+        {"value": "16", "fact": "Driver is responsible for buckling up passengers under this age", "cat": "R12"},
+        {"value": "13", "fact": "Children under this age are safest in the back seat", "cat": "R12"},
+        {"value": "8 years", "fact": "A child can move from a booster seat to a seatbelt at this age", "cat": "R12"},
+        {"value": "under 9 kg (20 lb)", "fact": "Infants this size ride in a rear-facing car seat", "cat": "R12"},
+        {"value": "9–18 kg (20–40 lb)", "fact": "Toddlers this size ride in a car seat with the tether strap", "cat": "R12"},
+        {"value": "18–36 kg (40–80 lb)", "fact": "Weight range for a booster seat", "cat": "R12"},
+        {"value": "2+ people", "fact": "Minimum number of people in a car to use an HOV lane", "cat": "R10"},
+        {"value": "4,600 kg", "fact": "Heaviest trailer a G licence can tow", "cat": "R13"},
+        {"value": "1,360 kg", "fact": "Trailers this heavy (with load) must have brakes", "cat": "R13"},
+        {"value": "5–10%", "fact": "Share of the trailer's weight that should rest on the hitch", "cat": "R13"}
+      ]
+    }
+  ],
+  "mixups": [
+    {"pair": "150 m vs 60 m", "tip": "Low beams within **150 m** of an **oncoming** car, but within **60 m** when **following**. Following is closer, so it's the smaller number."},
+    {"pair": "20 m · 5 m · 2 m", "tip": "**20 m** behind a school bus. **5 m** from a train's rail or gate. **2 m** behind a streetcar's doors. Bus is big = big number."},
+    {"pair": "3 · 6 · 9 · 15 m (parking)", "tip": "Hydrant **3**, theatre/hotel door **6**, intersection **9**, traffic lights or railway **15**. Each step gets bigger."},
+    {"pair": "30 m (passing)", "tip": "No passing within **30 m** of a **pedestrian crossover**, and no passing left of the centre line within **30 m** of a **bridge, viaduct or tunnel**."},
+    {"pair": "125 m vs 150 m", "tip": "**125 m** clear view to **park**. **150 m** clear view to make a **U-turn**."},
+    {"pair": "2-6-9 vs 6-9-15", "tip": "New drivers **2-6-9** (suspended at 9). Full drivers **6-9-15** (suspended at 15)."},
+    {"pair": "60 days vs 30 days", "tip": "Demerit suspension: **new driver 60 days**, **full driver 30 days**. New drivers get the longer one."},
+    {"pair": "Reduced to 4 vs 7", "tip": "After the suspension: **new → 4 points**, **full → 7 points**."},
+    {"pair": "50 vs 80 km/h", "tip": "No sign: **50** in town, **80** out of town."},
+    {"pair": "6 days · 30 days · 60 days", "tip": "**6** days: tell MTO about a new name or address. **30** days: new resident registers their car. **60** days: new resident's old licence still works."},
+    {"pair": ".05 vs .08", "tip": "**.05–.08** = warn range (roadside suspension). **Over .08** = criminal + 90 days. A G1's helper must be **under .05**."},
+    {"pair": "12 months vs 8 months", "tip": "G1 = **12 months**, or **8** with driving school. G2 = at least **12 months**."}
+  ],
+  "tricks": [
+    "**150 is the \"far\" number**: low beams for oncoming, headlights at 150 m visibility, U-turn view, fire truck following, snow plow lights.",
+    "**2 is the \"close\" number**: 2-second following distance, 2 m streetcar doors, 2 points for small mistakes, points last 2 years.",
+    "**Zero, zero, zero**: G1, G2 and everyone 21 and under, no alcohol.",
+    "**Say numbers out loud** while you study. Hearing yourself say them helps them stick."
+  ]
+}

@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Power Tools — Going Beyond Built-in Shortcuts</title>
+<style>
+/* Monochrome by design: made for a black & white laser printer.
+   No gradients, no colour, no grey fills (they print as dither dots).
+   Hierarchy comes from weight, size, borders and italics only. */
+:root {
+  --paper: #FFFFFF; --ink: #000000; --rule: #000000; --desk: #E6E6E6; --toolbar: #333333;
+  --mono: ui-monospace, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+  --sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { --desk: #161616; --toolbar: #BBBBBB; }
+}
+:root[data-theme="dark"] { --desk: #161616; --toolbar: #BBBBBB; }
+@page { size: letter landscape; margin: 0.3in; }
+* { box-sizing: border-box; }
+html, body { margin: 0; background: var(--desk); color: var(--ink); font-family: var(--sans); }
+body { padding: 16px; }
+.toolbar { max-width: 10.4in; margin: 0 auto 12px; display: flex; gap: 12px; align-items: center;
+  font-size: 14px; color: var(--toolbar); flex-wrap: wrap; }
+.toolbar button { font: inherit; padding: 6px 14px; border: 1px solid #000; border-radius: 6px;
+  background: #fff; color: #000; cursor: pointer; }
+.toolbar a { color: inherit; }
+.page { width: 10.4in; margin: 0 auto 24px; background: var(--paper); color: var(--ink); padding: 0;
+  box-shadow: 0 1px 4px rgba(0,0,0,.25); font-size: var(--fs); line-height: 1.28;
+  display: flex; flex-direction: column; }
+.page.fit { height: 7.9in; overflow: hidden; }
+.head { display: flex; align-items: baseline; justify-content: space-between; gap: 1em;
+  border-bottom: 2.5pt solid var(--ink); padding: .1em .1em .25em; margin: 0 .6em; }
+.head h1 { margin: 0; font-size: 1.6em; letter-spacing: -.01em; font-weight: 800; }
+.head span { font-family: var(--mono); font-size: .85em; white-space: nowrap; }
+.intro { padding: .35em .7em 0; font-style: italic; }
+.intro p { margin: 0 0 .3em; }
+section:first-child h2 { margin-top: .1em; }
+.cols { column-count: var(--cols); column-gap: 1.3em; column-rule: .5pt solid var(--rule);
+  padding: .45em .7em .5em; }
+.page.fit .cols { flex: 1; min-height: 0; column-fill: auto; }
+section { break-inside: auto; }
+h2 { font-size: 1.12em; font-weight: 800; text-transform: uppercase; letter-spacing: .03em;
+  margin: .7em 0 .25em; padding-bottom: .1em; border-bottom: 1.5pt solid var(--ink); break-after: avoid; break-inside: avoid; }
+h3 { font-size: 1em; font-weight: 700; margin: .45em 0 .15em; text-decoration: underline;
+  text-underline-offset: .15em; break-after: avoid; break-inside: avoid; }
+p { margin: .2em 0 .35em; }
+p.note { border-left: 2.5pt solid var(--ink); padding-left: .5em; font-style: italic; }
+ul, ol { margin: .15em 0 .35em; padding-left: 1.3em; }
+li { margin: .08em 0; }
+table { width: 100%; table-layout: fixed; border-collapse: collapse; margin: .1em 0 .3em; }
+tr { break-inside: avoid; }
+td, th { overflow-wrap: break-word; vertical-align: top; padding: .16em .3em .16em 0; border-bottom: .75pt dotted var(--rule); text-align: left; }
+th { font-size: .8em; text-transform: uppercase; letter-spacing: .04em; font-weight: 700;
+  border-bottom: 1pt solid var(--rule); }
+td:first-child { width: 42%; }
+table.three td:first-child { width: 34%; }
+td:nth-child(3) { font-style: italic; }
+kbd, code { font-family: var(--mono); font-size: .9em; white-space: nowrap; color: var(--ink); }
+kbd { display: inline-block; padding: 0 .3em; border: .75pt solid var(--ink); border-bottom-width: 1.75pt;
+  border-radius: 3px; background: var(--paper); line-height: 1.25; font-weight: 600; }
+code { padding: 0 .1em; white-space: normal; word-break: break-word; border-bottom: .75pt dashed var(--ink); }
+.combo { white-space: normal; }
+.combo i { font-style: normal; padding: 0 .12em; font-size: .85em; }
+pre { font-family: var(--mono); font-size: .82em; border: .75pt solid var(--ink); padding: .4em .5em;
+  margin: .2em 0 .4em; white-space: pre-wrap; break-inside: avoid; }
+.big td { padding: .35em .5em .35em 0; }
+@media print {
+  html, body { background: #fff; padding: 0; }
+  .toolbar { display: none; }
+  .page { box-shadow: none; margin: 0; break-after: page; }
+  .page:last-child { break-after: auto; }
+}
+@media screen and (max-width: 10.9in) {
+  body { overflow-x: auto; }
+}
+</style>
+</head>
+<body>
+<div class="toolbar"><button onclick="window.print()">Print</button><span>Letter, landscape · margins: Default · scale 100% · black &amp; white is fine</span><a href="index.html">all sheets</a></div>
+<div class="page fit " style="--fs:10.0pt;--cols:3"><div class="head"><h1>Power Tools — Going Beyond Built-in Shortcuts</h1><span>Windows · shortcuts</span></div><div class="intro"><p>Once the built-in shortcuts are automatic, these tools let you make your <em>own</em>.</p><p class="note"><b>Work PC:</b> you're IT, but still ask before installing anything — most of these need admin rights or approval. Built-in options are listed first.</p></div><div class="cols"><section><h2>Built in — no install needed</h2><table class="three"><thead><tr><th>Tool</th><th>How</th><th>Use</th></tr></thead><tbody><tr><td><b>Clipboard history</b></td><td><span class="combo"><kbd>Win</kbd><i>+</i><wbr><kbd>V</kbd></span> → Turn on</td><td>Last 25 copies; <b>pin</b> your most-pasted text</td></tr><tr><td><b>Snipping Tool</b></td><td><span class="combo"><kbd>Win</kbd><i>+</i><wbr><kbd>Shift</kbd><i>+</i><wbr><kbd>S</kbd></span></td><td>Region screenshot to clipboard</td></tr><tr><td><b>Text from screenshots</b></td><td>Snipping Tool → <em>Text actions</em> (Win 11)</td><td>Copy text out of an image someone sent</td></tr><tr><td><b>Sticky Keys</b> etc.</td><td>Know how to turn <em>off</em> if a user triggers it (press <kbd>Shift</kbd> 5×)</td><td></td></tr><tr><td><b>Custom app hotkeys</b></td><td>Right-click a Start/desktop shortcut → Properties → <em>Shortcut key</em></td><td>e.g. <span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>Alt</kbd><i>+</i><wbr><kbd>S</kbd></span> opens SDP</td></tr><tr><td><b>Browser site search</b></td><td>See browser-chrome-edge.md</td><td><code>sdp 12345</code> jumps to a ticket</td></tr></tbody></table></section><section><h2>Microsoft PowerToys (free, from Microsoft)</h2><table class="three"><thead><tr><th>Feature</th><th>Default key</th><th>Use</th></tr></thead><tbody><tr><td><b>PowerToys Run / Command Palette</b></td><td><span class="combo"><kbd>Alt</kbd><i>+</i><wbr><kbd>Space</kbd></span> (Run) / <span class="combo"><kbd>Win</kbd><i>+</i><wbr><kbd>Alt</kbd><i>+</i><wbr><kbd>Space</kbd></span> (Command Palette)</td><td>Launcher: apps, files, calculator, web search</td></tr><tr><td><b>Text Extractor</b></td><td><span class="combo"><kbd>Win</kbd><i>+</i><wbr><kbd>Shift</kbd><i>+</i><wbr><kbd>T</kbd></span></td><td>Drag over any screen area → its text is copied (OCR)</td></tr><tr><td><b>Advanced Paste</b></td><td><span class="combo"><kbd>Win</kbd><i>+</i><wbr><kbd>Shift</kbd><i>+</i><wbr><kbd>V</kbd></span> (menu), <span class="combo"><kbd>Win</kbd><i>+</i><wbr><kbd>Ctrl</kbd><i>+</i><wbr><kbd>Alt</kbd><i>+</i><wbr><kbd>V</kbd></span> (plain text)</td><td>Paste as plain text / other formats anywhere</td></tr><tr><td><b>FancyZones</b></td><td><span class="combo"><kbd>Win</kbd><i>+</i><wbr><kbd>Shift</kbd><i>+</i><wbr><kbd>`</kbd></span> (editor), hold <kbd>Shift</kbd> while dragging</td><td>Custom window layouts for wide monitors</td></tr><tr><td><b>Keyboard Manager</b></td><td>settings</td><td>Remap keys (e.g. Caps Lock → Ctrl or Esc)</td></tr><tr><td><b>Shortcut Guide</b></td><td>hold <kbd>Win</kbd></td><td>Shows Win-key shortcuts on screen</td></tr><tr><td><b>Always on Top</b></td><td><span class="combo"><kbd>Win</kbd><i>+</i><wbr><kbd>Ctrl</kbd><i>+</i><wbr><kbd>T</kbd></span></td><td>Pin the ticket you're copying <em>from</em> above everything</td></tr><tr><td><b>Find My Mouse</b></td><td>double-tap left <kbd>Ctrl</kbd></td><td>Find the cursor on multiple screens</td></tr></tbody></table></section><section><p>(Defaults change between versions — check each feature's settings page.)</p></section><section><h2>Text expansion — stop typing the same notes</h2><p>You type the same phrases all day: greetings, "please restart and try again", resolution notes. A text expander turns a short code into the full text.</p></section><section><table><tbody><tr><td><b>SDP reply/resolution templates</b></td><td>Built into SDP — ask your admin. Best first choice.</td></tr><tr><td><b>Outlook Quick Parts / My Templates</b></td><td>For email only</td></tr><tr><td><b>AutoHotkey</b> (free)</td><td>Works everywhere; needs install approval</td></tr><tr><td><b>Espanso</b> (free, open source)</td><td>Cross-platform (Windows + Linux), simple config file</td></tr></tbody></table></section><section><p>AutoHotkey v2 example (<code>hotstrings.ahk</code>):</p></section><section><pre>; type ;pw then space/enter -&gt; expands
+::;pw::Password reset completed. User confirmed they can sign in.
+::;rst::Please restart your computer and let me know if the issue continues.
+::;ty::Thanks for contacting the Help Desk!
+::;sig::Your Name`nIT Help Desk
+
+; Ctrl+Alt+D types today&#x27;s date
+^!d::Send FormatTime(, &quot;yyyy-MM-dd&quot;)</pre></section><section><p>Start each code with <kbd>;</kbd> so you never trigger one by accident.</p></section><section><h2>Browser extensions (ask first)</h2><table><tbody><tr><td><b>Vimium</b> / <b>Vimium C</b></td><td>Press <kbd>f</kbd> and every link/button gets a letter label — click anything from the keyboard</td></tr><tr><td><b>Text Blaze</b> / <b>Magical</b></td><td>Text expansion inside the browser, with fill-in fields</td></tr><tr><td><b>Shortkeys</b></td><td>Bind your own keys to browser actions</td></tr></tbody></table></section></div></div>
+</body>
+</html>

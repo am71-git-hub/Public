@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Text Selection &amp; Clipboard — Linux</title>
+<style>
+/* Monochrome by design: made for a black & white laser printer.
+   No gradients, no colour, no grey fills (they print as dither dots).
+   Hierarchy comes from weight, size, borders and italics only. */
+:root {
+  --paper: #FFFFFF; --ink: #000000; --rule: #000000; --desk: #E6E6E6; --toolbar: #333333;
+  --mono: ui-monospace, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+  --sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { --desk: #161616; --toolbar: #BBBBBB; }
+}
+:root[data-theme="dark"] { --desk: #161616; --toolbar: #BBBBBB; }
+@page { size: letter landscape; margin: 0.3in; }
+* { box-sizing: border-box; }
+html, body { margin: 0; background: var(--desk); color: var(--ink); font-family: var(--sans); }
+body { padding: 16px; }
+.toolbar { max-width: 10.4in; margin: 0 auto 12px; display: flex; gap: 12px; align-items: center;
+  font-size: 14px; color: var(--toolbar); flex-wrap: wrap; }
+.toolbar button { font: inherit; padding: 6px 14px; border: 1px solid #000; border-radius: 6px;
+  background: #fff; color: #000; cursor: pointer; }
+.toolbar a { color: inherit; }
+.page { width: 10.4in; margin: 0 auto 24px; background: var(--paper); color: var(--ink); padding: 0;
+  box-shadow: 0 1px 4px rgba(0,0,0,.25); font-size: var(--fs); line-height: 1.28;
+  display: flex; flex-direction: column; }
+.page.fit { height: 7.9in; overflow: hidden; }
+.head { display: flex; align-items: baseline; justify-content: space-between; gap: 1em;
+  border-bottom: 2.5pt solid var(--ink); padding: .1em .1em .25em; margin: 0 .6em; }
+.head h1 { margin: 0; font-size: 1.6em; letter-spacing: -.01em; font-weight: 800; }
+.head span { font-family: var(--mono); font-size: .85em; white-space: nowrap; }
+.intro { padding: .35em .7em 0; font-style: italic; }
+.intro p { margin: 0 0 .3em; }
+section:first-child h2 { margin-top: .1em; }
+.cols { column-count: var(--cols); column-gap: 1.3em; column-rule: .5pt solid var(--rule);
+  padding: .45em .7em .5em; }
+.page.fit .cols { flex: 1; min-height: 0; column-fill: auto; }
+section { break-inside: auto; }
+h2 { font-size: 1.12em; font-weight: 800; text-transform: uppercase; letter-spacing: .03em;
+  margin: .7em 0 .25em; padding-bottom: .1em; border-bottom: 1.5pt solid var(--ink); break-after: avoid; break-inside: avoid; }
+h3 { font-size: 1em; font-weight: 700; margin: .45em 0 .15em; text-decoration: underline;
+  text-underline-offset: .15em; break-after: avoid; break-inside: avoid; }
+p { margin: .2em 0 .35em; }
+p.note { border-left: 2.5pt solid var(--ink); padding-left: .5em; font-style: italic; }
+ul, ol { margin: .15em 0 .35em; padding-left: 1.3em; }
+li { margin: .08em 0; }
+table { width: 100%; table-layout: fixed; border-collapse: collapse; margin: .1em 0 .3em; }
+tr { break-inside: avoid; }
+td, th { overflow-wrap: break-word; vertical-align: top; padding: .16em .3em .16em 0; border-bottom: .75pt dotted var(--rule); text-align: left; }
+th { font-size: .8em; text-transform: uppercase; letter-spacing: .04em; font-weight: 700;
+  border-bottom: 1pt solid var(--rule); }
+td:first-child { width: 42%; }
+table.three td:first-child { width: 34%; }
+td:nth-child(3) { font-style: italic; }
+kbd, code { font-family: var(--mono); font-size: .9em; white-space: nowrap; color: var(--ink); }
+kbd { display: inline-block; padding: 0 .3em; border: .75pt solid var(--ink); border-bottom-width: 1.75pt;
+  border-radius: 3px; background: var(--paper); line-height: 1.25; font-weight: 600; }
+code { padding: 0 .1em; white-space: normal; word-break: break-word; border-bottom: .75pt dashed var(--ink); }
+.combo { white-space: normal; }
+.combo i { font-style: normal; padding: 0 .12em; font-size: .85em; }
+pre { font-family: var(--mono); font-size: .82em; border: .75pt solid var(--ink); padding: .4em .5em;
+  margin: .2em 0 .4em; white-space: pre-wrap; break-inside: avoid; }
+.big td { padding: .35em .5em .35em 0; }
+@media print {
+  html, body { background: #fff; padding: 0; }
+  .toolbar { display: none; }
+  .page { box-shadow: none; margin: 0; break-after: page; }
+  .page:last-child { break-after: auto; }
+}
+@media screen and (max-width: 10.9in) {
+  body { overflow-x: auto; }
+}
+</style>
+</head>
+<body>
+<div class="toolbar"><button onclick="window.print()">Print</button><span>Letter, landscape · margins: Default · scale 100% · black &amp; white is fine</span><a href="index.html">all sheets</a></div>
+<div class="page fit " style="--fs:11.0pt;--cols:3"><div class="head"><h1>Text Selection &amp; Clipboard — Linux</h1><span>Linux · shortcuts</span></div><div class="intro"><p>Linux desktops (X11 and Wayland) have <b>two clipboards</b>. Knowing both is the biggest copy/paste speedup on Linux.</p></div><div class="cols"><section><h2>The two clipboards</h2><table class="three"><thead><tr><th>Clipboard</th><th>Copy</th><th>Paste</th></tr></thead><tbody><tr><td><b>PRIMARY</b> (selection)</td><td>Just <b>select</b> text with the mouse — that's it</td><td><b>Middle-click</b> (or <span class="combo"><kbd>Shift</kbd><i>+</i><wbr><kbd>Insert</kbd></span> in many terminals)</td></tr><tr><td><b>CLIPBOARD</b> (normal)</td><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>C</kbd></span> (<span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>Shift</kbd><i>+</i><wbr><kbd>C</kbd></span> in terminals)</td><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>V</kbd></span> (<span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>Shift</kbd><i>+</i><wbr><kbd>V</kbd></span> in terminals)</td></tr></tbody></table></section><section><p>They're independent: you can hold one thing in each. Select a hostname (PRIMARY) and <span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>C</kbd></span> a password (CLIPBOARD) — paste either one where you need it.</p></section><section><h2>Mouse selection</h2><p>Same as Windows, and the result goes straight to PRIMARY:</p></section><section><table><tbody><tr><td>Double-click</td><td>Word</td></tr><tr><td>Triple-click</td><td>Whole line</td></tr><tr><td>Click, then <span class="combo"><kbd>Shift</kbd><i>+</i><wbr><kbd>click</kbd></span> (or right-click in some terminals)</td><td>Extend selection</td></tr><tr><td>Double-click + drag</td><td>By words</td></tr><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>Alt</kbd><i>+</i><wbr><kbd>drag</kbd></span> / <span class="combo"><kbd>Alt</kbd><i>+</i><wbr><kbd>drag</kbd></span></td><td>Rectangular block (terminal-dependent)</td></tr></tbody></table></section><section><h2>Keyboard selection in GUI apps</h2><p>GTK/Qt apps (Firefox, Chrome, text editors, LibreOffice) use the same keys as Windows: <span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>Shift</kbd><i>+</i><wbr><kbd>←/→</kbd></span> word, <span class="combo"><kbd>Shift</kbd><i>+</i><wbr><kbd>Home/End</kbd></span> line, <span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>Backspace</kbd></span> delete word, <span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>Z</kbd></span> undo. See ../windows/text-selection-and-editing.md.</p></section><section><h2>In the terminal</h2><table><tbody><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>Shift</kbd><i>+</i><wbr><kbd>C</kbd></span> / <span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>Shift</kbd><i>+</i><wbr><kbd>V</kbd></span></td><td>Copy / paste (because <span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>C</kbd></span> is "interrupt")</td></tr><tr><td><span class="combo"><kbd>Shift</kbd><i>+</i><wbr><kbd>Insert</kbd></span></td><td>Paste (PRIMARY or CLIPBOARD, depends on terminal)</td></tr><tr><td>Select with mouse</td><td>Copies to PRIMARY automatically</td></tr><tr><td>Middle-click</td><td>Paste PRIMARY</td></tr></tbody></table></section><section><p><b>Alacritty</b> (default bindings):</p></section><section><table><tbody><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>Shift</kbd><i>+</i><wbr><kbd>C</kbd></span> / <kbd>V</kbd></td><td>Copy / paste</td></tr><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>Shift</kbd><i>+</i><wbr><kbd>Space</kbd></span></td><td><b>Vi mode</b> — move with <code>h j k l</code>, <code>w b</code>, <code>0 $</code>; <kbd>v</kbd> to select, <kbd>y</kbd> to copy, <kbd>Esc</kbd>/<kbd>i</kbd> to leave</td></tr><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>Shift</kbd><i>+</i><wbr><kbd>F</kbd></span> / <kbd>B</kbd></td><td>Search forward / backward in scrollback</td></tr><tr><td><span class="combo"><kbd>Shift</kbd><i>+</i><wbr><kbd>PgUp</kbd></span> / <kbd>PgDn</kbd></td><td>Scroll</td></tr><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>+</kbd></span> / <kbd>-</kbd> / <kbd>0</kbd></td><td>Font size</td></tr></tbody></table></section><section><p><b>Inside tmux</b> the mouse selection belongs to tmux, not the terminal. Hold <b><kbd>Shift</kbd></b> while selecting to bypass tmux and use the terminal's own selection. tmux's copy mode: see ../../tmux/.</p></section><section><h2>From the command line</h2><table><tbody><tr><td><code>xclip -sel clip &lt; file</code></td><td>Copy file contents to CLIPBOARD (X11)</td></tr><tr><td><code>xclip -o</code></td><td>Print PRIMARY</td></tr><tr><td><code>wl-copy &lt; file</code> / <kbd>wl-paste</kbd></td><td>Same on Wayland</td></tr><tr><td><code>cmd | xclip -sel clip</code></td><td>Copy a command's output</td></tr><tr><td><code>printf &#x27;\e]52;c;%s\a&#x27; &quot;$(base64 -w0 &lt; file)&quot;</code></td><td>OSC 52: copy to your <b>local</b> clipboard from an SSH session (terminal must allow it)</td></tr></tbody></table></section><section><h2>Clipboard managers</h2><p>GNOME forgets the clipboard when the source app closes. A manager keeps history (like <span class="combo"><kbd>Win</kbd><i>+</i><wbr><kbd>V</kbd></span>): <b>CopyQ</b>, <b>GPaste</b> (GNOME), or <b>Clipboard Indicator</b> extension.</p></section></div></div>
+</body>
+</html>

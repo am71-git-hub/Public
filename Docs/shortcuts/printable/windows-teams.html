@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Microsoft Teams (new Teams, Windows desktop app)</title>
+<style>
+/* Monochrome by design: made for a black & white laser printer.
+   No gradients, no colour, no grey fills (they print as dither dots).
+   Hierarchy comes from weight, size, borders and italics only. */
+:root {
+  --paper: #FFFFFF; --ink: #000000; --rule: #000000; --desk: #E6E6E6; --toolbar: #333333;
+  --mono: ui-monospace, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+  --sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { --desk: #161616; --toolbar: #BBBBBB; }
+}
+:root[data-theme="dark"] { --desk: #161616; --toolbar: #BBBBBB; }
+@page { size: letter landscape; margin: 0.3in; }
+* { box-sizing: border-box; }
+html, body { margin: 0; background: var(--desk); color: var(--ink); font-family: var(--sans); }
+body { padding: 16px; }
+.toolbar { max-width: 10.4in; margin: 0 auto 12px; display: flex; gap: 12px; align-items: center;
+  font-size: 14px; color: var(--toolbar); flex-wrap: wrap; }
+.toolbar button { font: inherit; padding: 6px 14px; border: 1px solid #000; border-radius: 6px;
+  background: #fff; color: #000; cursor: pointer; }
+.toolbar a { color: inherit; }
+.page { width: 10.4in; margin: 0 auto 24px; background: var(--paper); color: var(--ink); padding: 0;
+  box-shadow: 0 1px 4px rgba(0,0,0,.25); font-size: var(--fs); line-height: 1.28;
+  display: flex; flex-direction: column; }
+.page.fit { height: 7.9in; overflow: hidden; }
+.head { display: flex; align-items: baseline; justify-content: space-between; gap: 1em;
+  border-bottom: 2.5pt solid var(--ink); padding: .1em .1em .25em; margin: 0 .6em; }
+.head h1 { margin: 0; font-size: 1.6em; letter-spacing: -.01em; font-weight: 800; }
+.head span { font-family: var(--mono); font-size: .85em; white-space: nowrap; }
+.intro { padding: .35em .7em 0; font-style: italic; }
+.intro p { margin: 0 0 .3em; }
+section:first-child h2 { margin-top: .1em; }
+.cols { column-count: var(--cols); column-gap: 1.3em; column-rule: .5pt solid var(--rule);
+  padding: .45em .7em .5em; }
+.page.fit .cols { flex: 1; min-height: 0; column-fill: auto; }
+section { break-inside: auto; }
+h2 { font-size: 1.12em; font-weight: 800; text-transform: uppercase; letter-spacing: .03em;
+  margin: .7em 0 .25em; padding-bottom: .1em; border-bottom: 1.5pt solid var(--ink); break-after: avoid; break-inside: avoid; }
+h3 { font-size: 1em; font-weight: 700; margin: .45em 0 .15em; text-decoration: underline;
+  text-underline-offset: .15em; break-after: avoid; break-inside: avoid; }
+p { margin: .2em 0 .35em; }
+p.note { border-left: 2.5pt solid var(--ink); padding-left: .5em; font-style: italic; }
+ul, ol { margin: .15em 0 .35em; padding-left: 1.3em; }
+li { margin: .08em 0; }
+table { width: 100%; table-layout: fixed; border-collapse: collapse; margin: .1em 0 .3em; }
+tr { break-inside: avoid; }
+td, th { overflow-wrap: break-word; vertical-align: top; padding: .16em .3em .16em 0; border-bottom: .75pt dotted var(--rule); text-align: left; }
+th { font-size: .8em; text-transform: uppercase; letter-spacing: .04em; font-weight: 700;
+  border-bottom: 1pt solid var(--rule); }
+td:first-child { width: 42%; }
+table.three td:first-child { width: 34%; }
+td:nth-child(3) { font-style: italic; }
+kbd, code { font-family: var(--mono); font-size: .9em; white-space: nowrap; color: var(--ink); }
+kbd { display: inline-block; padding: 0 .3em; border: .75pt solid var(--ink); border-bottom-width: 1.75pt;
+  border-radius: 3px; background: var(--paper); line-height: 1.25; font-weight: 600; }
+code { padding: 0 .1em; white-space: normal; word-break: break-word; border-bottom: .75pt dashed var(--ink); }
+.combo { white-space: normal; }
+.combo i { font-style: normal; padding: 0 .12em; font-size: .85em; }
+pre { font-family: var(--mono); font-size: .82em; border: .75pt solid var(--ink); padding: .4em .5em;
+  margin: .2em 0 .4em; white-space: pre-wrap; break-inside: avoid; }
+.big td { padding: .35em .5em .35em 0; }
+@media print {
+  html, body { background: #fff; padding: 0; }
+  .toolbar { display: none; }
+  .page { box-shadow: none; margin: 0; break-after: page; }
+  .page:last-child { break-after: auto; }
+}
+@media screen and (max-width: 10.9in) {
+  body { overflow-x: auto; }
+}
+</style>
+</head>
+<body>
+<div class="toolbar"><button onclick="window.print()">Print</button><span>Letter, landscape · margins: Default · scale 100% · black &amp; white is fine</span><a href="index.html">all sheets</a></div>
+<div class="page fit " style="--fs:11.0pt;--cols:2"><div class="head"><h1>Microsoft Teams (new Teams, Windows desktop app)</h1><span>Windows · shortcuts</span></div><div class="intro"><p><b><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>.</kbd></span></b> shows the official list inside Teams — Microsoft changes these, so trust that over any sheet. In the browser version, some keys differ (e.g. <span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>Alt</kbd><i>+</i><wbr><kbd>E</kbd></span> for search) because the browser owns them.</p></div><div class="cols"><section><h2>Getting around</h2><table><tbody><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>.</kbd></span></td><td>Show keyboard shortcuts</td></tr><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>E</kbd></span></td><td>Search box (type a person's name to jump to their chat)</td></tr><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>N</kbd></span></td><td>New chat</td></tr><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>1, 2, 3…</kbd></span></td><td>Apps in the left bar, in order (Activity, Chat, Teams, Calendar…)</td></tr><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>F</kbd></span></td><td>Search inside the current chat / channel</td></tr><tr><td><kbd>F6</kbd> / <span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>F6</kbd></span></td><td>Move focus between regions (left bar, list, conversation, compose)</td></tr><tr><td><kbd>↑</kbd> <kbd>↓</kbd></td><td>Move through chat list or messages once focused</td></tr><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>,</kbd></span></td><td>Settings</td></tr><tr><td><kbd>Esc</kbd></td><td>Back out of whatever you're in</td></tr></tbody></table></section><section><h2>Writing messages</h2><table><tbody><tr><td><kbd>Enter</kbd></td><td>Send</td></tr><tr><td><span class="combo"><kbd>Shift</kbd><i>+</i><wbr><kbd>Enter</kbd></span></td><td>New line (don't send)</td></tr><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>Shift</kbd><i>+</i><wbr><kbd>X</kbd></span></td><td>Expand compose box — then <kbd>Enter</kbd> = new line, <span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>Enter</kbd></span> = send</td></tr><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>B</kbd></span> / <kbd>I</kbd> / <kbd>U</kbd></td><td>Bold / italic / underline</td></tr><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>Shift</kbd><i>+</i><wbr><kbd>V</kbd></span></td><td>Paste as plain text</td></tr><tr><td><kbd>@</kbd> + name, then <kbd>Tab</kbd>/<kbd>Enter</kbd></td><td>Mention someone</td></tr><tr><td>Type <kbd>```</kbd></td><td>Start a code block — great for pasting error messages and logs</td></tr><tr><td>Type <kbd>`</kbd> around text</td><td>Inline code (e.g. a hostname)</td></tr><tr><td><kbd>↑</kbd> (in empty compose box)</td><td>Edit your last message (in many versions)</td></tr></tbody></table></section><section><h2>Calls &amp; meetings</h2><table><tbody><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>Shift</kbd><i>+</i><wbr><kbd>M</kbd></span></td><td>Mute / unmute</td></tr><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>Space</kbd></span> (hold)</td><td>Push-to-talk while muted</td></tr><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>Shift</kbd><i>+</i><wbr><kbd>O</kbd></span></td><td>Camera on / off</td></tr><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>Shift</kbd><i>+</i><wbr><kbd>E</kbd></span></td><td>Share screen</td></tr><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>Shift</kbd><i>+</i><wbr><kbd>K</kbd></span></td><td>Raise / lower hand</td></tr><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>Shift</kbd><i>+</i><wbr><kbd>A</kbd></span></td><td>Accept audio call</td></tr><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>Shift</kbd><i>+</i><wbr><kbd>S</kbd></span></td><td>Accept video call</td></tr><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>Shift</kbd><i>+</i><wbr><kbd>D</kbd></span></td><td>Decline call</td></tr><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>Shift</kbd><i>+</i><wbr><kbd>H</kbd></span></td><td>Leave / hang up</td></tr></tbody></table></section><section><h2>Habits that save time</h2><ul><li>Pin your team lead and the main help-desk channel (<kbd>…</kbd> → Pin) so they're always at the top.</li><li>Use <b>Saved messages</b> (bookmark a message) for instructions you'll need again.</li><li><span class="combo"><kbd>Win</kbd><i>+</i><wbr><kbd>Shift</kbd><i>+</i><wbr><kbd>S</kbd></span> then <span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>V</kbd></span> in a chat = instant screenshot to a colleague.</li><li>Set Teams as <span class="combo"><kbd>Win</kbd><i>+</i><wbr><kbd>2</kbd></span> on the taskbar so you can flip to it from anywhere.</li></ul></section></div></div>
+</body>
+</html>

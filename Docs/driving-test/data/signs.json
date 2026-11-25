@@ -1,0 +1,282 @@
+{
+  "cats": [
+    {
+      "id": "S1",
+      "title": "Sign shapes & colours",
+      "intro": [
+        "Signs use **shapes** and **colours** so you can tell what kind of sign it is before you can read it.",
+        "**Stop** sign: **8 sides** (octagon), **red** with white letters. Come to a complete stop.",
+        "**Yield** sign: **triangle**, **white** with a **red border**. Let traffic go first; stop if needed.",
+        "**School zone** sign: **5 sides** (pentagon), **fluorescent yellow/green** with black symbols.",
+        "**Railway crossing** sign: **X-shaped**, **white** with a **red outline**.",
+        "**Regulatory** signs (rules you must obey): usually **rectangle or square**, **white or black** background.",
+        "**Green circle** = you **may or must** do the activity shown. **Red circle with a line** through it = **not allowed**.",
+        "**Warning** signs: usually **diamond**, **yellow** with black letters or symbols.",
+        "**Temporary condition** signs (road work, detours): usually **diamond**, **orange** with black letters or symbols.",
+        "**Information and direction** signs: usually **rectangle**, **green** with white letters. Other colours guide you to facilities, services and attractions.",
+        "**Slow-moving vehicle** sign: **orange triangle** with a **red border** (vehicle goes **40 km/h or less**)."
+      ],
+      "tips": [
+        "**8 sides = STOP.** No other sign has 8 sides.",
+        "**5 sides = school.** It looks like a little school house.",
+        "**Upside-down triangle = YIELD.** It points down: \"slow down and let them go\".",
+        "**Yellow diamond = warning. Orange diamond = road work.** Orange = construction cones.",
+        "**Green circle = OK. Red circle + slash = NO.**",
+        "**Green rectangle = where to go** (towns, exits, distances)."
+      ],
+      "signs": [
+        {"file": "signs/3-1-1.jpg", "name": "Stop", "meaning": "A stop sign is eight-sided and has a red background with white letters. It means you must come to a complete stop.", "do": "Stop at the stop line. No line: stop at the crosswalk. No crosswalk: edge of the sidewalk. No sidewalk: edge of the intersection."},
+        {"file": "signs/3-1-2.jpg", "name": "School zone", "meaning": "A school zone sign is five-sided and has a fluorescent yellow/green background with black symbols. It warns that you are coming to a school zone.", "do": "Slow down, drive with extra caution and watch for children."},
+        {"file": "signs/3-1-3.jpg", "name": "Yield", "meaning": "A yield sign is a triangle with a white background and a red border. It means you must let traffic in the intersection or close to it go first.", "do": "Stop if necessary and go only when the way is clear."},
+        {"file": "signs/3-1-4.jpg", "name": "Railway crossing", "meaning": "A railway crossing sign is X-shaped with a white background and red outline. It warns that railway tracks cross the road.", "do": "Slow down and look both ways for trains. Be prepared to stop."}
+      ]
+    },
+    {
+      "id": "S2",
+      "title": "Regulatory & HOV signs",
+      "intro": [
+        "Regulatory signs give a **direction that must be obeyed**.",
+        "They are usually **rectangular or square** with a **white or black** background and black, white or coloured letters.",
+        "**Green circle** = you **may or must** do it. **Red circle with a line** = **not allowed**.",
+        "**No stopping** = not even for a moment. **No standing** = only to load/unload **passengers**. **No parking** = only to load/unload **passengers or merchandise**.",
+        "**HOV** (high occupancy vehicle) lanes use a **white diamond** symbol."
+      ],
+      "tips": [
+        "**Stopping < Standing < Parking.** No stopping is the strictest: never stop. No standing: people only. No parking: people **and** stuff.",
+        "Arrows under a sign (← →) mean the rule covers **the area between the signs**.",
+        "**Diamond symbol = reserved lane** (HOV, bus, bike)."
+      ],
+      "signs": [
+        {"file": "signs/3-1-5.jpg", "name": "Official bicycle route", "meaning": "This road is an official bicycle route. Watch for cyclists and be prepared to share the road with them."},
+        {"file": "signs/3-1-6.jpg", "name": "Parking allowed during posted times", "meaning": "You may park in the area between the signs during the times posted. (Used in pairs or groups.)"},
+        {"file": "signs/3-1-7.jpg", "name": "Snowmobiles may use this road", "meaning": "Snowmobiles may use this road."},
+        {"file": "signs/3-1-8.jpg", "name": "Do not enter", "meaning": "Do not enter this road."},
+        {"file": "signs/3-1-9.jpg", "name": "No stopping", "meaning": "Do not stop in the area between the signs. This means you may not stop your vehicle in this area, even for a moment. (Used in pairs or groups.)"},
+        {"file": "signs/3-1-10.jpg", "name": "No standing", "meaning": "Do not stand in the area between the signs. This means you may not stop your vehicle in this area except while loading or unloading passengers. (Used in pairs or groups.)"},
+        {"file": "signs/3-1-11.jpg", "name": "No parking", "meaning": "Do not park in the area between the signs. This means you may not stop your vehicle except to load or unload passengers or merchandise. (Used in pairs or groups.)"},
+        {"file": "signs/3-1-12.jpg", "name": "No left turn", "meaning": "Do not turn left at the intersection."},
+        {"file": "signs/3-1-13.jpg", "name": "No straight through", "meaning": "Do not drive through the intersection."},
+        {"file": "signs/3-1-14.jpg", "name": "No U-turn", "meaning": "Do not turn to go in the opposite direction. (U-turn)"},
+        {"file": "signs/3-1-15.jpg", "name": "No right turn on red", "meaning": "Do not turn right when facing a red light at the intersection."},
+        {"file": "signs/3-1-16.jpg", "name": "No left turn during times shown", "meaning": "Do not turn left during the times shown."},
+        {"file": "signs/3-1-17.jpg", "name": "Accessible parking only", "meaning": "This parking space is only for vehicles displaying a valid Accessible Parking Permit."},
+        {"file": "signs/3-1-18.jpg", "name": "No bicycles", "meaning": "No bicycles allowed on this road."},
+        {"file": "signs/3-1-19.jpg", "name": "No pedestrians", "meaning": "No pedestrians allowed on this road."},
+        {"file": "signs/3-1-20.jpg", "name": "Keep right of traffic island", "meaning": "Keep to the right of the traffic island."},
+        {"file": "signs/3-1-21.jpg", "name": "Speed limit changes ahead", "meaning": "Speed limit changes ahead."},
+        {"file": "signs/3-1-22.jpg", "name": "Do not pass", "meaning": "Do not pass on this road."},
+        {"file": "signs/3-1-23.jpg", "name": "Slower traffic keep right", "meaning": "Slow traffic on multi-lane roads must keep right."},
+        {"file": "signs/3-1-24.jpg", "name": "Community safety zone", "meaning": "Indicates areas where the community has identified that there is a special risk to pedestrians. Traffic related offences committed within the zone are subject to increased fines."},
+        {"file": "signs/3-1-25.jpg", "name": "School zone speed limit (when flashing)", "meaning": "The speed limit in this zone is lower during school hours. Observe the speed limit shown when the yellow lights are flashing."},
+        {"file": "signs/3-1-25b.jpg", "name": "Stop for school bus when signals flashing", "meaning": "Stop for school bus when signals are flashing."},
+        {"file": "signs/3-1-26.jpg", "name": "Stop for school bus, both directions", "meaning": "This sign is installed on multi-lane highways with no centre median divider. It informs drivers approaching from both directions that they must stop for a school bus when its signal lights are flashing."},
+        {"file": "signs/3-1-27.jpg", "name": "Lane use arrows", "meaning": "These signs, above the road or on the pavement before an intersection, tell drivers the direction they must travel. For example: the driver in lane one must turn left; the driver in lane two must turn left or go straight ahead; and the driver in lane three must turn right."},
+        {"file": "signs/3-1-28.jpg", "name": "One way", "meaning": "Traffic may travel in one direction only."},
+        {"file": "signs/3-1-29.jpg", "name": "Pedestrian crossover", "meaning": "This is a pedestrian crossover. Be prepared to stop and yield right-of-way to pedestrians."},
+        {"file": "signs/3-1-30.jpg", "name": "Two-way left-turn lane", "meaning": "This sign, above the road or on the ground, means the lane is only for two-way left turns."},
+        {"file": "signs/3-1-31.jpg", "name": "Accessible pick-up/drop-off only", "meaning": "This sign reserves curb area for vehicles displaying a valid Accessible Person Parking Permit picking up and dropping off passengers with disabilities."},
+        {"file": "signs/3-1-32.jpg", "name": "Reserved lane", "meaning": "These signs mean lanes are only for specific types of vehicles, either all the time or during certain hours. Different symbols are used for the different types of vehicles. They include: buses, taxis, vehicles with three or more people and bicycles."},
+        {"file": "signs/3-1-33.jpg", "name": "Keep right except to pass", "meaning": "Keep to the right lane except when passing on two-lane sections where climbing or passing lanes are provided."},
+        {"file": "signs/3-1-33a.jpg", "name": "Yield to bus", "meaning": "This sign on the back of transit buses serves as a reminder to motorists of the law requiring vehicles approaching a bus stopped at a dedicated Bus Stop to yield to the bus, once the bus has signalled its intent to return to the lane."},
+        {"file": "signs/3-1-33b.jpg", "name": "Road forks to the right", "meaning": "Road forks to the right."},
+        {"file": "signs/3-1-33c.jpg", "name": "School bus loading zone", "meaning": "Marks a zone within which school buses load or unload passengers without using the red alternating lights and stop arm."},
+        {"file": "signs/3-1-34.jpg", "name": "HOV lane", "meaning": "Only public vehicles such as buses, or passenger vehicles carrying a specified minimum number of passengers, may use this lane."},
+        {"file": "signs/3-1-35.jpg", "name": "HOV: do not cross", "meaning": "Vehicles cannot change lanes into or out of a high-occupancy vehicle lane in this area."}
+      ]
+    },
+    {
+      "id": "S3",
+      "title": "Warning signs",
+      "intro": [
+        "Warning signs warn of **dangerous or unusual conditions ahead**, such as a curve, turn, dip or sideroad.",
+        "They are usually **diamond-shaped** with a **yellow** background and black letters or symbols.",
+        "A **checkerboard border** warns of danger: slow down, be careful.",
+        "A square yellow sign with a number (like **60 km/h**) under a curve sign shows the **maximum safe speed** for the curve or ramp."
+      ],
+      "tips": [
+        "**Yellow diamond = something is coming up ahead.** It warns; it doesn't give an order.",
+        "**Look at the picture literally.** Arrow bending a little = slight bend. Arrow at a right angle = sharp turn. Arrows splitting around a shape = divided highway begins. Arrows coming together = divided highway ends.",
+        "**Divided highway begins** shows the road splitting **apart**. **Ends** shows the two sides coming **together**."
+      ],
+      "signs": [
+        {"file": "signs/3-1-36a.jpg", "name": "Narrow bridge ahead", "meaning": "Narrow bridge ahead."},
+        {"file": "signs/3-1-37a.jpg", "name": "Road branching off ahead", "meaning": "Road branching off ahead."},
+        {"file": "signs/3-1-38a.jpg", "name": "Intersection ahead", "meaning": "Intersection ahead. The arrow shows which direction of traffic has the right-of-way."},
+        {"file": "signs/3-1-39a.jpg", "name": "Roundabout ahead", "meaning": "Roundabout Ahead. Reduce Speed. The counter-clockwise arrows show the direction of vehicle traffic within the roundabout."},
+        {"file": "signs/3-1-40a.jpg", "name": "Hidden side road (no clear view)", "meaning": "Drivers on the sideroad at the intersection ahead don't have a clear view of traffic."},
+        {"file": "signs/3-1-41a.jpg", "name": "Pavement narrows ahead", "meaning": "Pavement narrows ahead."},
+        {"file": "signs/3-1-42a.jpg", "name": "Slight bend ahead", "meaning": "Slight bend or curve in the road ahead."},
+        {"file": "signs/3-1-43a.jpg", "name": "Maximum safe speed for curve", "meaning": "Posted under a curve warning, this sign shows the maximum safe speed for the curve."},
+        {"file": "signs/3-1-44a.jpg", "name": "Sharp bend or turn ahead", "meaning": "Sharp bend or turn in the road ahead."},
+        {"file": "signs/3-1-45a.jpg", "name": "Chevron (sharp curve guide)", "meaning": "Chevron (arrowhead) signs are posted in groups to guide drivers around sharp curves in the road."},
+        {"file": "signs/3-1-46a.jpg", "name": "Winding road ahead", "meaning": "Winding road ahead."},
+        {"file": "signs/3-1-47a.jpg", "name": "Bridge lifts or swings", "meaning": "The bridge ahead lifts or swings to let boats pass."},
+        {"file": "signs/3-1-48a.jpg", "name": "Paved surface ends", "meaning": "Paved surface ends ahead."},
+        {"file": "signs/3-1-49a.jpg", "name": "Bicycle crossing ahead", "meaning": "Bicycle crossing ahead."},
+        {"file": "signs/3-1-50a.jpg", "name": "Stop sign ahead", "meaning": "Stop sign ahead. Slow down."},
+        {"file": "signs/3-1-51a.jpg", "name": "Two-way traffic (share with oncoming)", "meaning": "Share the road with oncoming traffic."},
+        {"file": "signs/3-1-51-2_2018.jpg", "name": "Share the road (cyclists)", "meaning": "The share the road sign is used to warn motorists that they are to provide safe space on the road for cyclists and other vehicles. This sign also warns motorists and cyclists to exercise additional caution on the upcoming section of road."},
+        {"file": "signs/3-1-52a.jpg", "name": "Slippery when wet", "meaning": "Pavement is slippery when wet. Slow down and drive with caution."},
+        {"file": "signs/3-1-53a.jpg", "name": "Hazard marker", "meaning": "Hazard close to the edge of the road. The downward lines show the side on which you may safely pass."},
+        {"file": "signs/3-1-54a.jpg", "name": "Divided highway begins", "meaning": "Divided highway begins: traffic travels in both directions on separated roads ahead. Keep to the right-hand road. Each road carries one-way traffic."},
+        {"file": "signs/3-1-55a.jpg", "name": "Right lane ends", "meaning": "Right lane ends ahead. If you are in the right-hand lane, you must merge safely with traffic in the lane to the left."},
+        {"file": "signs/3-1-56a.jpg", "name": "Traffic lights ahead", "meaning": "Traffic lights ahead. Slow down."},
+        {"file": "signs/3-1-57a.jpg", "name": "Steep hill", "meaning": "Steep hill ahead. You may need to use a lower gear."},
+        {"file": "signs/3-1-58a.jpg", "name": "Merge (two roads join)", "meaning": "Two roads going in the same direction are about to join into one. Drivers on both roads are equally responsible for seeing that traffic merges smoothly and safely."},
+        {"file": "signs/3-1-59a.jpg", "name": "Snowmobiles cross", "meaning": "Snowmobiles cross this road."},
+        {"file": "signs/3-1-60a.jpg", "name": "Divided highway ends", "meaning": "Divided highway ends: traffic travels in both directions on the same road ahead. Keep to the right-hand road."},
+        {"file": "signs/3-1-61a.jpg", "name": "Low underpass", "meaning": "Underpass ahead. Take care if you are driving a tall vehicle. Sign shows how much room you have."},
+        {"file": "signs/3-1-62a.jpg", "name": "Bump or uneven pavement", "meaning": "Bump or uneven pavement on the road ahead. Slow down and keep control of your vehicle."},
+        {"file": "signs/3-1-63a.jpg", "name": "Railway crossing ahead", "meaning": "Railway crossing ahead. Be alert for trains. This sign also shows the angle at which the railway tracks cross the road."},
+        {"file": "signs/3-1-64a.jpg", "name": "Sharp turn (checkerboard)", "meaning": "Sharp turn or bend in the road in the direction of the arrow. The checkerboard border warns of danger. Slow down; be careful."},
+        {"file": "signs/3-1-65a.jpg", "name": "Deer crossing", "meaning": "Deer regularly cross this road; be alert for animals."},
+        {"file": "signs/3-1-66a.jpg", "name": "Truck entrance", "meaning": "Truck entrance on the right side of the road ahead. If the sign shows the truck on the left, the entrance is on the left side of the road."},
+        {"file": "signs/3-1-67a.jpg", "name": "Maximum safe speed on ramp", "meaning": "Shows maximum safe speed on ramp."},
+        {"file": "signs/3-1-68a.jpg", "name": "Pedestrians", "meaning": "Watch for pedestrians and be prepared to share the road with them."},
+        {"file": "signs/3-1-69a.jpg", "name": "Falling rock", "meaning": "Watch for fallen rock and be prepared to avoid a collision."},
+        {"file": "signs/3-1-70a.jpg", "name": "Water over road", "meaning": "There may be water flowing over the road."},
+        {"file": "signs/3-1-71a2.jpg", "name": "Hidden school bus stop", "meaning": "This sign warns you that you are coming to a hidden school bus stop. Slow down, drive with extra caution, watch for children and for a school bus with flashing red lights."},
+        {"file": "signs/3-1-71a.jpg", "name": "Bus entrance", "meaning": "Indicates an upcoming bus entrance on the right and vehicles should be prepared to yield to buses entering the roadway."},
+        {"file": "signs/3-1-71b2.jpg", "name": "Fire truck entrance", "meaning": "Indicates an upcoming fire truck entrance on the right and vehicles should be prepared to yield to fire trucks entering the roadway."},
+        {"file": "signs/3-1-72.jpg", "name": "School crossing", "meaning": "These signs warn of a school crossing. Watch for children and follow the directions of the crossing guard or school safety patroller."}
+      ]
+    },
+    {
+      "id": "S4",
+      "title": "Temporary condition (construction) signs",
+      "intro": [
+        "These signs warn of **unusual temporary conditions** such as road work zones, diversions, detours, lane closures or traffic control people on the road.",
+        "They are usually **diamond-shaped** with an **orange** background and black letters or symbols.",
+        "Speeding fines are **doubled in construction zones when workers are present**.",
+        "You must obey **STOP or SLOW** signs held by a traffic-control person."
+      ],
+      "tips": [
+        "**Orange = road work.** Think of orange cones and orange vests.",
+        "In a construction zone: slow down, **don't change lanes**, be ready to stop, watch for workers."
+      ],
+      "signs": [
+        {"file": "signs/3-1-73.jpg", "name": "Construction 1 km ahead", "meaning": "Construction work one kilometre ahead."},
+        {"file": "signs/3-1-74.jpg", "name": "Road work ahead", "meaning": "Road work ahead."},
+        {"file": "signs/3-1-75.jpg", "name": "Survey crew ahead", "meaning": "Survey crew working on the road ahead."},
+        {"file": "signs/3-1-76.jpg", "name": "Traffic control person ahead", "meaning": "Traffic control person ahead. Drive slowly and watch for instructions."},
+        {"file": "signs/3-1-77.jpg", "name": "Construction zone begins", "meaning": "You are entering a construction zone. Drive with extra caution and be prepared for a lower speed limit."},
+        {"file": "signs/3-1-78.jpg", "name": "Detour", "meaning": "Temporary detour from normal traffic route."},
+        {"file": "signs/3-1-79.jpg", "name": "Flashing arrow board", "meaning": "Flashing lights on the arrows show the direction to follow."},
+        {"file": "signs/3-1-80.jpg", "name": "Milled or grooved pavement", "meaning": "Pavement has been milled or grooved. Your vehicle's stopping ability may be affected so obey the speed limit and drive with extra caution. Motorcyclists may experience reduced traction on these surfaces."},
+        {"file": "signs/3-1-81.jpg", "name": "Lane closed ahead", "meaning": "Lane ahead is closed for roadwork. Obey the speed limit and merge with traffic in the open lane."},
+        {"file": "signs/3-1-82.jpg", "name": "Closed lane: merge in arrow direction", "meaning": "Closed lane. Adjust speed to merge with traffic in lane indicated by arrow."},
+        {"file": "signs/3-1-83.jpg", "name": "Do not pass pilot vehicle", "meaning": "Do not pass the pilot vehicle or pace vehicle bearing this sign."},
+        {"file": "signs/3-1-84.jpg", "name": "Traffic control STOP / SLOW paddle", "meaning": "Reduce speed and be prepared to stop."},
+        {"file": "signs/3-1-85.jpg", "name": "Follow detour marker", "meaning": "Follow detour marker until you return to regular route."},
+        {"file": "signs/3-1-86.jpg", "name": "Speed fines doubled (workers present)", "meaning": "Enforces doubling the HTA fines for speeding in a designated construction zone when there are workers present."}
+      ]
+    },
+    {
+      "id": "S5",
+      "title": "Information, direction & other signs",
+      "intro": [
+        "Information and direction signs tell you about **distances and destinations**.",
+        "They are usually **rectangular** with a **green** background and white letters. Other signs with different colours guide you to **facilities, services and attractions**.",
+        "Freeway **exit numbers** match the **distance in km** from where the freeway begins (exit 204 on Highway 401 is 204 km from Windsor).",
+        "**Slow-moving vehicle** sign: **orange triangle with a red border**, on vehicles going **40 km/h or less**.",
+        "**LCV** (long commercial vehicle): a double trailer up to **40 metres** long."
+      ],
+      "tips": [
+        "**Green = go somewhere.** Directions, distances, exits.",
+        "**Exit number = km from the start of the freeway.** Subtract two exit numbers to get the distance between them.",
+        "**Orange triangle on the back of a tractor or buggy = 40 km/h or less.** Slow down and stay back."
+      ],
+      "signs": [
+        {"file": "signs/3-1-87.jpg", "name": "Directions to towns", "meaning": "Shows directions to nearby towns and cities."},
+        {"file": "signs/3-1-88.jpg", "name": "Distances to towns", "meaning": "Shows the distances in kilometres to towns and cities on the road."},
+        {"file": "signs/3-1-89.jpg", "name": "Freeway exit lanes", "meaning": "Various exit signs are used on freeways. In urban areas, many exit ramps have more than one lane. Overhead and ground-mounted signs help drivers choose the correct lane to exit or stay on the freeway."},
+        {"file": "signs/3-1-90.jpg", "name": "Advance exit sign", "meaning": "Advance signs use arrows to show which lanes lead off the freeway. Signs are also posted at the exit."},
+        {"file": "signs/3-1-90-2.jpg", "name": "Exit-only lanes (yellow box)", "meaning": "Sometimes one or more lanes may lead off the freeway. The arrows matching the exit lanes are shown on the advance sign in a yellow box with the word ‘exit' under them."},
+        {"file": "signs/3-1-91.jpg", "name": "Interchange number", "meaning": "Freeway interchanges or exits have numbers that correspond to the distance from the beginning of the freeway."},
+        {"file": "signs/3-1-92.jpg", "name": "VIA (route to follow)", "meaning": "The term 'VIA' is used to describe the roads that must be followed to reach a destination."},
+        {"file": "signs/3-1-93.jpg", "name": "Roundabout exits", "meaning": "Shows the upcoming roundabout exits and where they will take you."},
+        {"file": "signs/3-1-94.jpg", "name": "Changeable message sign", "meaning": "These signs change according to traffic conditions to give drivers current information on delays and lane closures ahead."},
+        {"file": "signs/3-1-95.jpg", "name": "Off-road facilities", "meaning": "Shows off-road facilities such as hospitals, airports, universities or carpool lots."},
+        {"file": "signs/3-1-96.jpg", "name": "Passenger railway station", "meaning": "Shows route to passenger railway station."},
+        {"file": "signs/3-1-97.jpg", "name": "Airport", "meaning": "Shows route to airport."},
+        {"file": "signs/3-1-99.jpg", "name": "Wheelchair accessible", "meaning": "Shows facilities that are accessible by wheelchair."},
+        {"file": "signs/3-1-98.jpg", "name": "Oversize load (D sign)", "meaning": "D sign – Oversize load"},
+        {"file": "signs/3-1-100.jpg", "name": "Slow-moving vehicle", "meaning": "The “slow-moving vehicle” sign is an orange triangle with a red border. It alerts other drivers that the vehicle ahead will be travelling at 40 km/h or less."},
+        {"file": "signs/3-1-101.jpg", "name": "Emergency detour route (EDR)", "meaning": "EDR signs are used during the unscheduled closure of a provincial highway when OPP detour all traffic off the highway."},
+        {"file": "signs/3-1-101-2a.jpg", "name": "Long commercial vehicle (LCV)", "meaning": "This placard indicates a long commercial vehicle, which is a double trailer and can be up to 40 metres in length."},
+        {"file": "signs/3-1-102.jpg", "name": "Emergency response numbering", "meaning": "Some information signs include a numbering system along the bottom of the sign to assist emergency vehicles and drivers in determining an appropriate route."},
+        {"file": "signs/3-1-103a.jpg", "name": "Bilingual signs", "meaning": "Watch for these signs when driving in designated bilingual areas. Read the messages in the language you understand best."}
+      ]
+    },
+    {
+      "id": "S6",
+      "title": "Traffic lights & beacons",
+      "intro": [
+        "**Green**: go (turn left, straight or right) **after yielding** to vehicles and pedestrians already in the intersection.",
+        "**Yellow (amber)**: red is coming. **Stop if you can do so safely**; otherwise go with caution.",
+        "**Red**: complete stop. You may turn **right** on red after a full stop (unless a sign says no). You may turn **left on red only from a one-way road onto a one-way road**, after a full stop.",
+        "**Flashing green** or **green arrow + green light** = **advance green**: you may turn left, go straight or turn right; oncoming traffic still has a red.",
+        "**Green arrow with a red light** = simultaneous left turn from the left-turn lane. A **yellow arrow** after it: don't start your turn; stop if you safely can.",
+        "**Flashing red** light or beacon = **complete stop**, then go when safe. **Flashing yellow** = drive with caution.",
+        "**Blank (power out)** traffic lights = treat it like an **all-way stop**.",
+        "**Transit priority signal** (white vertical bar) = buses/streetcars go; everyone else yields."
+      ],
+      "tips": [
+        "**Flashing red = stop sign. Flashing yellow = caution sign.**",
+        "**Dead light = all-way stop.**",
+        "**Flashing green = you have the green, they have the red** (advance green)."
+      ],
+      "signs": [
+        {"file": "lights/3-2-1.jpg", "name": "Green light", "meaning": "A green light means you may turn left, go straight or turn right after yielding to vehicles and pedestrians already in the intersection."},
+        {"file": "lights/3-2-2.jpg", "name": "Yellow (amber) light", "meaning": "A yellow - or amber - light means the red light is about to appear. You must stop if you can do so safely; otherwise, go with caution."},
+        {"file": "lights/3-2-3.jpg", "name": "Red light", "meaning": "A red light means you must stop. Bring your vehicle to a complete stop at the stop line if it is marked on the pavement."},
+        {"file": "lights/3-2-4.jpg", "name": "Flashing green light", "meaning": "When you face a flashing green light or a left-pointing green arrow and a green light, you may turn left, go straight ahead or turn right from the proper lane. This is called an advanced green light because oncoming traffic still faces a red light."},
+        {"file": "lights/3-2-5.jpg", "name": "Green arrow + green light (advance green)", "meaning": "When you face a flashing green light or a left-pointing green arrow and a green light, you may turn left, go straight ahead or turn right from the proper lane."},
+        {"file": "lights/3-2-6.jpg", "name": "Left green arrow + red light", "meaning": "When a left-turn green arrow is shown with a red light, you may turn left from the left-turn lane. Vehicles turning left from the opposite direction may also be making left turns because they too face a left-turn green arrow."},
+        {"file": "lights/3-2-7.jpg", "name": "Yellow arrow + red light", "meaning": "After the left-turn green arrow, a yellow arrow may appear. This means the green light is about to appear for traffic in one or both directions. Do not start your left turn. Stop if you can do so safely; otherwise, complete your turn with caution."},
+        {"file": "lights/3-2-8.jpg", "name": "Green light after the arrow", "meaning": "You can still turn left when the light is green, but only when the way is clear of traffic and pedestrians. If the light turns red when you are in the intersection, complete your turn when it is safe."},
+        {"file": "lights/3-2-9.jpg", "name": "Transit priority signal", "meaning": "Traffic and pedestrians must yield to public transit vehicles at a transit priority signal. The round signal is on top of a regular traffic signal and shows a white vertical bar on a dark background."},
+        {"file": "lights/3-2-10.jpg", "name": "Fully protected left turn: green arrow", "meaning": "You may turn left from the left-turn lane when you face a green arrow. Vehicles from the opposite direction may also be turning left."},
+        {"file": "lights/3-2-11.jpg", "name": "Fully protected left turn: yellow", "meaning": "After the left-turn green arrow, a yellow light appears for left-turning vehicles only."},
+        {"file": "lights/3-2-12.jpg", "name": "Fully protected left turn: red", "meaning": "After the yellow light, a red light appears for left-turning vehicles only. Traffic going straight ahead or turning right will face a green light or green arrows pointing straight ahead and to the right."},
+        {"file": "lights/3-2-13.jpg", "name": "Flashing red light", "meaning": "You must come to a complete stop at a flashing red light. Move through the intersection only when it is safe."},
+        {"file": "lights/3-2-14.jpg", "name": "Flashing yellow light", "meaning": "A flashing yellow light means you should drive with caution when approaching and moving through the intersection."},
+        {"file": "lights/3-2-15.jpg", "name": "Blank traffic light (power failure)", "meaning": "During an electrical power loss, traffic lights at intersections will not work. Yield the right-of-way to vehicles in the intersection and to vehicles entering the intersection from your right. Go cautiously and use the intersection the same way you would use an intersection with all-way stop signs."},
+        {"file": "lights/3-2-16.jpg", "name": "Flashing red beacon", "meaning": "A flashing red beacon above an intersection or stop sign means you must come to a complete stop. Move through the intersection only when it is safe to do so."},
+        {"file": "lights/3-2-17.jpg", "name": "Flashing yellow beacon", "meaning": "A flashing yellow beacon above an intersection, above a warning sign or on an obstruction in the road, warns you to drive with caution."}
+      ]
+    },
+    {
+      "id": "S7",
+      "title": "Pedestrian signals & pavement markings",
+      "intro": [
+        "**Walk** signal = a **white walking person**. A **flashing or steady orange hand** = pedestrians must **not begin** to cross.",
+        "Pedestrians already crossing when the hand appears still have the right-of-way.",
+        "Pedestrians may **not** cross on a **flashing green** light or a **left-turn green arrow** (unless a pedestrian signal says so).",
+        "**Yellow lines** separate traffic going in **opposite** directions. **White lines** separate traffic going the **same** direction.",
+        "**Solid line on your left** = unsafe to pass. **Broken line on your left** = you may pass if the way is clear.",
+        "**Continuity lines** (wider, closer broken lines) **on your left** = your lane is ending or exiting.",
+        "**Stop line** = single white line across the road. **Crosswalk** = two parallel white lines.",
+        "**Pedestrian crossover** = two white **double** parallel lines with an **X in each approaching lane**."
+      ],
+      "tips": [
+        "**Yellow = opposite ways. White = same way.**",
+        "**Solid = stay. Broken = OK to pass if clear.**",
+        "**X on the road before a crossing = pedestrian crossover** (or a railway crossing, when there are railway signs)."
+      ],
+      "signs": [
+        {"file": "lights/3-3-1.jpg", "name": "Walk and don't-walk signals", "meaning": "The signal for pedestrians to walk is a white walking symbol. A flashing or steady orange hand symbol means pedestrians must not begin to cross."},
+        {"file": "lights/3-3-2.jpg", "name": "Intersection with pedestrian signals", "meaning": "A pedestrian facing a flashing or steady hand symbol should not begin to cross the road. Pedestrians who have already begun to cross when the hand signal appears, should go as quickly as possible to a safe area. While they are crossing, pedestrians still have the right-of-way over vehicles."},
+        {"file": "markings/3-1.jpg", "name": "Yellow vs white lines", "meaning": "Yellow lines separate traffic travelling in opposite directions. White lines separate traffic travelling in the same direction."},
+        {"file": "markings/3-2.jpg", "name": "Solid line on your left", "meaning": "A solid line at the left of your lane means it is unsafe to pass. ('A' should not pass.)"},
+        {"file": "markings/3-3a.jpg", "name": "Broken line on your left", "meaning": "A broken line at the left of your lane means you may pass if the way is clear. ('A' may pass if there are enough broken lines ahead to complete the pass safely.)"},
+        {"file": "markings/3-4.jpg", "name": "Continuity lines", "meaning": "Broken lines that are wider and closer together than regular broken lines are called continuity lines. When you see continuity lines on your left side, it generally means the lane you are in is ending or exiting and that you must change lanes if you want to continue in your current direction. Continuity lines on your right mean your lane will continue unaffected."},
+        {"file": "markings/3-5.jpg", "name": "Stop line", "meaning": "A stop line is a single white line painted across the road at an intersection. It shows where you must stop."},
+        {"file": "markings/3-6.jpg", "name": "Crosswalk", "meaning": "A crosswalk is marked by two parallel white lines painted across the road. However, crosswalks at intersections are not always marked."},
+        {"file": "markings/3-7.jpg", "name": "White lane arrows", "meaning": "A white arrow painted on a lane means you may move only in the direction of the arrow."},
+        {"file": "markings/2-23.jpg", "name": "Pedestrian crossover markings", "meaning": "Pedestrian crossovers are marked by two white double parallel lines across the road with an X in each lane approaching it. Drivers and cyclists must stop before the line and yield to pedestrians until pedestrians have completely crossed the road and cleared the roadway."},
+        {"file": "markings/3-9.jpg", "name": "Lines around fixed objects", "meaning": "Two solid lines painted on the pavement guide traffic away from fixed objects such as bridge piers or concrete islands. Yellow and black markings are also painted on the objects themselves as warnings."}
+      ]
+    }
+  ]
+}

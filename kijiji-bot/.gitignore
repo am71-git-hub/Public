@@ -1,0 +1,7 @@
+.env
+seen.json
+logs/
+__pycache__/
+*.pyc
+session_cookies.json
+report_state.json

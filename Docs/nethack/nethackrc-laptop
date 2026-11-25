@@ -1,0 +1,33 @@
+# NetHack config — laptop / no numpad
+# Movement: vi keys
+#   y k u
+#   h . l
+#   b j n
+# Arrow keys handle N/S/E/W, vi keys needed for diagonals (y u b n)
+
+OPTIONS=number_pad:0
+
+# Display
+OPTIONS=showexp
+OPTIONS=showscore
+OPTIONS=time
+OPTIONS=lit_corridor
+OPTIONS=hilite_pet
+OPTIONS=color
+
+# Symbols
+SYMBOLS=S_room:~
+
+
+# Gameplay
+OPTIONS=autopickup
+OPTIONS=pickup_types:$!?=/
+OPTIONS=safe_pet
+OPTIONS=confirm
+OPTIONS=rest_on_space
+OPTIONS=pushweapon
+
+# Messages
+OPTIONS=msg_window:full
+OPTIONS=verbose
+OPTIONS=legacy

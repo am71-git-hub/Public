@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Terminal &amp; Bash — Linux</title>
+<style>
+/* Monochrome by design: made for a black & white laser printer.
+   No gradients, no colour, no grey fills (they print as dither dots).
+   Hierarchy comes from weight, size, borders and italics only. */
+:root {
+  --paper: #FFFFFF; --ink: #000000; --rule: #000000; --desk: #E6E6E6; --toolbar: #333333;
+  --mono: ui-monospace, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+  --sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { --desk: #161616; --toolbar: #BBBBBB; }
+}
+:root[data-theme="dark"] { --desk: #161616; --toolbar: #BBBBBB; }
+@page { size: letter landscape; margin: 0.3in; }
+* { box-sizing: border-box; }
+html, body { margin: 0; background: var(--desk); color: var(--ink); font-family: var(--sans); }
+body { padding: 16px; }
+.toolbar { max-width: 10.4in; margin: 0 auto 12px; display: flex; gap: 12px; align-items: center;
+  font-size: 14px; color: var(--toolbar); flex-wrap: wrap; }
+.toolbar button { font: inherit; padding: 6px 14px; border: 1px solid #000; border-radius: 6px;
+  background: #fff; color: #000; cursor: pointer; }
+.toolbar a { color: inherit; }
+.page { width: 10.4in; margin: 0 auto 24px; background: var(--paper); color: var(--ink); padding: 0;
+  box-shadow: 0 1px 4px rgba(0,0,0,.25); font-size: var(--fs); line-height: 1.28;
+  display: flex; flex-direction: column; }
+.page.fit { height: 7.9in; overflow: hidden; }
+.head { display: flex; align-items: baseline; justify-content: space-between; gap: 1em;
+  border-bottom: 2.5pt solid var(--ink); padding: .1em .1em .25em; margin: 0 .6em; }
+.head h1 { margin: 0; font-size: 1.6em; letter-spacing: -.01em; font-weight: 800; }
+.head span { font-family: var(--mono); font-size: .85em; white-space: nowrap; }
+.intro { padding: .35em .7em 0; font-style: italic; }
+.intro p { margin: 0 0 .3em; }
+section:first-child h2 { margin-top: .1em; }
+.cols { column-count: var(--cols); column-gap: 1.3em; column-rule: .5pt solid var(--rule);
+  padding: .45em .7em .5em; }
+.page.fit .cols { flex: 1; min-height: 0; column-fill: auto; }
+section { break-inside: auto; }
+h2 { font-size: 1.12em; font-weight: 800; text-transform: uppercase; letter-spacing: .03em;
+  margin: .7em 0 .25em; padding-bottom: .1em; border-bottom: 1.5pt solid var(--ink); break-after: avoid; break-inside: avoid; }
+h3 { font-size: 1em; font-weight: 700; margin: .45em 0 .15em; text-decoration: underline;
+  text-underline-offset: .15em; break-after: avoid; break-inside: avoid; }
+p { margin: .2em 0 .35em; }
+p.note { border-left: 2.5pt solid var(--ink); padding-left: .5em; font-style: italic; }
+ul, ol { margin: .15em 0 .35em; padding-left: 1.3em; }
+li { margin: .08em 0; }
+table { width: 100%; table-layout: fixed; border-collapse: collapse; margin: .1em 0 .3em; }
+tr { break-inside: avoid; }
+td, th { overflow-wrap: break-word; vertical-align: top; padding: .16em .3em .16em 0; border-bottom: .75pt dotted var(--rule); text-align: left; }
+th { font-size: .8em; text-transform: uppercase; letter-spacing: .04em; font-weight: 700;
+  border-bottom: 1pt solid var(--rule); }
+td:first-child { width: 42%; }
+table.three td:first-child { width: 34%; }
+td:nth-child(3) { font-style: italic; }
+kbd, code { font-family: var(--mono); font-size: .9em; white-space: nowrap; color: var(--ink); }
+kbd { display: inline-block; padding: 0 .3em; border: .75pt solid var(--ink); border-bottom-width: 1.75pt;
+  border-radius: 3px; background: var(--paper); line-height: 1.25; font-weight: 600; }
+code { padding: 0 .1em; white-space: normal; word-break: break-word; border-bottom: .75pt dashed var(--ink); }
+.combo { white-space: normal; }
+.combo i { font-style: normal; padding: 0 .12em; font-size: .85em; }
+pre { font-family: var(--mono); font-size: .82em; border: .75pt solid var(--ink); padding: .4em .5em;
+  margin: .2em 0 .4em; white-space: pre-wrap; break-inside: avoid; }
+.big td { padding: .35em .5em .35em 0; }
+@media print {
+  html, body { background: #fff; padding: 0; }
+  .toolbar { display: none; }
+  .page { box-shadow: none; margin: 0; break-after: page; }
+  .page:last-child { break-after: auto; }
+}
+@media screen and (max-width: 10.9in) {
+  body { overflow-x: auto; }
+}
+</style>
+</head>
+<body>
+<div class="toolbar"><button onclick="window.print()">Print</button><span>Letter, landscape · margins: Default · scale 100% · black &amp; white is fine</span><a href="index.html">all sheets</a></div>
+<div class="page fit " style="--fs:9.0pt;--cols:4"><div class="head"><h1>Terminal &amp; Bash — Linux</h1><span>Linux · shortcuts</span></div><div class="intro"><p>Line editing in bash comes from <b>readline</b>, so these also work in <code>python</code>, <code>psql</code>, <code>mysql</code>, <code>gdb</code>, and most other interactive prompts. They're the terminal equivalent of <span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>←</kbd></span>, <span class="combo"><kbd>Shift</kbd><i>+</i><wbr><kbd>End</kbd></span> etc. on Windows.</p><p>For multiplexing and editing, see the existing docs: tmux and vim.</p></div><div class="cols"><section><h2>Moving on the command line</h2><table><tbody><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>A</kbd></span> / <span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>E</kbd></span></td><td>Start / end of line</td></tr><tr><td><span class="combo"><kbd>Alt</kbd><i>+</i><wbr><kbd>B</kbd></span> / <span class="combo"><kbd>Alt</kbd><i>+</i><wbr><kbd>F</kbd></span></td><td>Back / forward one word</td></tr><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>←</kbd></span> / <span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>→</kbd></span></td><td>Back / forward one word (most terminals)</td></tr><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>B</kbd></span> / <span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>F</kbd></span></td><td>Back / forward one character</td></tr><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>XX</kbd></span></td><td>Toggle between start of line and current position</td></tr></tbody></table></section><section><h2>Deleting &amp; the kill ring (readline's clipboard)</h2><table><tbody><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>W</kbd></span></td><td>Cut the word <b>before</b> the cursor</td></tr><tr><td><span class="combo"><kbd>Alt</kbd><i>+</i><wbr><kbd>D</kbd></span></td><td>Cut the word <b>after</b> the cursor</td></tr><tr><td><span class="combo"><kbd>Alt</kbd><i>+</i><wbr><kbd>Backspace</kbd></span></td><td>Cut word before (stops at <kbd>/</kbd> and <kbd>.</kbd> — nicer for paths)</td></tr><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>U</kbd></span></td><td>Cut from cursor to <b>start</b> of line</td></tr><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>K</kbd></span></td><td>Cut from cursor to <b>end</b> of line</td></tr><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>Y</kbd></span></td><td>Paste (yank) the last cut</td></tr><tr><td><span class="combo"><kbd>Alt</kbd><i>+</i><wbr><kbd>Y</kbd></span></td><td>After <span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>Y</kbd></span>: cycle through older cuts</td></tr><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>D</kbd></span></td><td>Delete character under cursor (on empty line: exit shell)</td></tr><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>_</kbd></span> or <span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>X Ctrl</kbd><i>+</i><wbr><kbd>U</kbd></span></td><td>Undo</td></tr></tbody></table></section><section><p><b>Trick:</b> typed a long command but need to run something else first? <span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>U</kbd></span> (cut it), run the other command, then <span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>Y</kbd></span> to get it back.</p></section><section><h2>Editing tricks</h2><table><tbody><tr><td><span class="combo"><kbd>Alt</kbd><i>+</i><wbr><kbd>T</kbd></span></td><td>Swap the last two words</td></tr><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>T</kbd></span></td><td>Swap the last two characters</td></tr><tr><td><span class="combo"><kbd>Alt</kbd><i>+</i><wbr><kbd>U</kbd></span> / <span class="combo"><kbd>Alt</kbd><i>+</i><wbr><kbd>L</kbd></span> / <span class="combo"><kbd>Alt</kbd><i>+</i><wbr><kbd>C</kbd></span></td><td>UPPERCASE / lowercase / Capitalise word</td></tr><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>X Ctrl</kbd><i>+</i><wbr><kbd>E</kbd></span></td><td>Open the current command in <code>$EDITOR</code> (vim) — for long one-liners</td></tr><tr><td><span class="combo"><kbd>Alt</kbd><i>+</i><wbr><kbd>.</kbd></span></td><td>Insert the <b>last argument</b> of the previous command (repeat for older ones)</td></tr><tr><td><span class="combo"><kbd>Alt</kbd><i>+</i><wbr><kbd>#</kbd></span></td><td>Comment out the line and save it in history (run it later)</td></tr><tr><td><kbd>Tab</kbd> / <code>Tab Tab</code></td><td>Complete / show all completions</td></tr></tbody></table></section><section><h2>History</h2><table><tbody><tr><td><kbd>↑</kbd> / <kbd>↓</kbd></td><td>Previous / next command</td></tr><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>R</kbd></span></td><td><b>Search history</b> backwards — keep pressing to go further</td></tr><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>S</kbd></span></td><td>Search forwards (needs <code>stty -ixon</code> in <code>~/.bashrc</code>)</td></tr><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>G</kbd></span></td><td>Cancel the search</td></tr><tr><td><kbd>Enter</kbd> / <kbd>→</kbd></td><td>Run the match / take it for editing</td></tr><tr><td><kbd>!!</kbd></td><td>Previous command (<code>sudo !!</code> = "that, but as root")</td></tr><tr><td><kbd>!$</kbd></td><td>Last argument of previous command</td></tr><tr><td><kbd>!*</kbd></td><td>All arguments of previous command</td></tr><tr><td><kbd>!ssh</kbd></td><td>Re-run the last command starting with <code>ssh</code></td></tr><tr><td><kbd>^old^new</kbd></td><td>Re-run previous command, replacing <code>old</code> with <code>new</code></td></tr><tr><td><code>history | grep foo</code></td><td>Find old commands</td></tr></tbody></table></section><section><p>Add to <code>~/.bashrc</code> for better history:</p></section><section><pre>HISTSIZE=100000
+HISTFILESIZE=200000
+HISTCONTROL=ignoreboth:erasedups
+shopt -s histappend
+# Up/Down search history by what you&#x27;ve already typed:
+bind &#x27;&quot;\e[A&quot;: history-search-backward&#x27;
+bind &#x27;&quot;\e[B&quot;: history-search-forward&#x27;</pre></section><section><h2>Process control</h2><table><tbody><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>C</kbd></span></td><td>Interrupt (stop) the running program</td></tr><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>Z</kbd></span></td><td>Suspend it — then <code>bg</code> (background) or <code>fg</code> (bring back)</td></tr><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>D</kbd></span></td><td>End of input / log out</td></tr><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>L</kbd></span></td><td>Clear screen (keeps current line)</td></tr><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>S</kbd></span> / <span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>Q</kbd></span></td><td>Freeze / unfreeze output (if the terminal "hangs", try <span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>Q</kbd></span>)</td></tr><tr><td><kbd>jobs</kbd></td><td>List suspended/background jobs</td></tr></tbody></table></section><section><h2>Pagers (<code>less</code>, <code>man</code>) — same keys as vim</h2><table><tbody><tr><td><kbd>Space</kbd> / <kbd>b</kbd></td><td>Page down / up</td></tr><tr><td><kbd>j</kbd> / <kbd>k</kbd></td><td>Line down / up</td></tr><tr><td><kbd>g</kbd> / <kbd>G</kbd></td><td>Top / bottom</td></tr><tr><td><kbd>/word</kbd> / <kbd>?word</kbd></td><td>Search forward / back; <kbd>n</kbd> / <kbd>N</kbd> next / previous</td></tr><tr><td><kbd>F</kbd> (in less)</td><td>Follow the file like <code>tail -f</code>; <span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>C</kbd></span> to stop</td></tr><tr><td><kbd>q</kbd></td><td>Quit</td></tr></tbody></table></section><section><h2>Directory hopping</h2><table><tbody><tr><td><code>cd -</code></td><td>Back to previous directory</td></tr><tr><td><kbd>cd</kbd></td><td>Home</td></tr><tr><td><code>pushd dir</code> / <kbd>popd</kbd></td><td>Stack of directories</td></tr><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>R</kbd></span> then <kbd>cd </kbd></td><td>Find that long <code>cd</code> you did yesterday</td></tr></tbody></table></section></div></div>
+</body>
+</html>

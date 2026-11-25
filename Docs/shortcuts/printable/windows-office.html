@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Outlook, Excel &amp; Word</title>
+<style>
+/* Monochrome by design: made for a black & white laser printer.
+   No gradients, no colour, no grey fills (they print as dither dots).
+   Hierarchy comes from weight, size, borders and italics only. */
+:root {
+  --paper: #FFFFFF; --ink: #000000; --rule: #000000; --desk: #E6E6E6; --toolbar: #333333;
+  --mono: ui-monospace, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+  --sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { --desk: #161616; --toolbar: #BBBBBB; }
+}
+:root[data-theme="dark"] { --desk: #161616; --toolbar: #BBBBBB; }
+@page { size: letter landscape; margin: 0.3in; }
+* { box-sizing: border-box; }
+html, body { margin: 0; background: var(--desk); color: var(--ink); font-family: var(--sans); }
+body { padding: 16px; }
+.toolbar { max-width: 10.4in; margin: 0 auto 12px; display: flex; gap: 12px; align-items: center;
+  font-size: 14px; color: var(--toolbar); flex-wrap: wrap; }
+.toolbar button { font: inherit; padding: 6px 14px; border: 1px solid #000; border-radius: 6px;
+  background: #fff; color: #000; cursor: pointer; }
+.toolbar a { color: inherit; }
+.page { width: 10.4in; margin: 0 auto 24px; background: var(--paper); color: var(--ink); padding: 0;
+  box-shadow: 0 1px 4px rgba(0,0,0,.25); font-size: var(--fs); line-height: 1.28;
+  display: flex; flex-direction: column; }
+.page.fit { height: 7.9in; overflow: hidden; }
+.head { display: flex; align-items: baseline; justify-content: space-between; gap: 1em;
+  border-bottom: 2.5pt solid var(--ink); padding: .1em .1em .25em; margin: 0 .6em; }
+.head h1 { margin: 0; font-size: 1.6em; letter-spacing: -.01em; font-weight: 800; }
+.head span { font-family: var(--mono); font-size: .85em; white-space: nowrap; }
+.intro { padding: .35em .7em 0; font-style: italic; }
+.intro p { margin: 0 0 .3em; }
+section:first-child h2 { margin-top: .1em; }
+.cols { column-count: var(--cols); column-gap: 1.3em; column-rule: .5pt solid var(--rule);
+  padding: .45em .7em .5em; }
+.page.fit .cols { flex: 1; min-height: 0; column-fill: auto; }
+section { break-inside: auto; }
+h2 { font-size: 1.12em; font-weight: 800; text-transform: uppercase; letter-spacing: .03em;
+  margin: .7em 0 .25em; padding-bottom: .1em; border-bottom: 1.5pt solid var(--ink); break-after: avoid; break-inside: avoid; }
+h3 { font-size: 1em; font-weight: 700; margin: .45em 0 .15em; text-decoration: underline;
+  text-underline-offset: .15em; break-after: avoid; break-inside: avoid; }
+p { margin: .2em 0 .35em; }
+p.note { border-left: 2.5pt solid var(--ink); padding-left: .5em; font-style: italic; }
+ul, ol { margin: .15em 0 .35em; padding-left: 1.3em; }
+li { margin: .08em 0; }
+table { width: 100%; table-layout: fixed; border-collapse: collapse; margin: .1em 0 .3em; }
+tr { break-inside: avoid; }
+td, th { overflow-wrap: break-word; vertical-align: top; padding: .16em .3em .16em 0; border-bottom: .75pt dotted var(--rule); text-align: left; }
+th { font-size: .8em; text-transform: uppercase; letter-spacing: .04em; font-weight: 700;
+  border-bottom: 1pt solid var(--rule); }
+td:first-child { width: 42%; }
+table.three td:first-child { width: 34%; }
+td:nth-child(3) { font-style: italic; }
+kbd, code { font-family: var(--mono); font-size: .9em; white-space: nowrap; color: var(--ink); }
+kbd { display: inline-block; padding: 0 .3em; border: .75pt solid var(--ink); border-bottom-width: 1.75pt;
+  border-radius: 3px; background: var(--paper); line-height: 1.25; font-weight: 600; }
+code { padding: 0 .1em; white-space: normal; word-break: break-word; border-bottom: .75pt dashed var(--ink); }
+.combo { white-space: normal; }
+.combo i { font-style: normal; padding: 0 .12em; font-size: .85em; }
+pre { font-family: var(--mono); font-size: .82em; border: .75pt solid var(--ink); padding: .4em .5em;
+  margin: .2em 0 .4em; white-space: pre-wrap; break-inside: avoid; }
+.big td { padding: .35em .5em .35em 0; }
+@media print {
+  html, body { background: #fff; padding: 0; }
+  .toolbar { display: none; }
+  .page { box-shadow: none; margin: 0; break-after: page; }
+  .page:last-child { break-after: auto; }
+}
+@media screen and (max-width: 10.9in) {
+  body { overflow-x: auto; }
+}
+</style>
+</head>
+<body>
+<div class="toolbar"><button onclick="window.print()">Print</button><span>Letter, landscape · margins: Default · scale 100% · black &amp; white is fine</span><a href="index.html">all sheets</a></div>
+<div class="page fit " style="--fs:9.75pt;--cols:4"><div class="head"><h1>Outlook, Excel &amp; Word</h1><span>Windows · shortcuts</span></div><div class="intro"><p>Press <b><kbd>Alt</kbd></b> in any Office app to show <b>KeyTips</b> — letters over every ribbon button. Keep pressing the letters to reach any command without the mouse (e.g. <kbd>Alt</kbd>, <kbd>H</kbd>, <kbd>B</kbd> → borders in Excel).</p></div><div class="cols"><section><h2>Outlook (classic &amp; new)</h2><table><tbody><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>1</kbd></span> / <kbd>2</kbd> / <kbd>3</kbd> / <kbd>4</kbd></td><td>Mail / Calendar / People / Tasks</td></tr><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>Shift</kbd><i>+</i><wbr><kbd>I</kbd></span></td><td>Inbox</td></tr><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>N</kbd></span></td><td>New item (in current view)</td></tr><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>Shift</kbd><i>+</i><wbr><kbd>M</kbd></span></td><td>New email from anywhere</td></tr><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>R</kbd></span></td><td>Reply</td></tr><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>Shift</kbd><i>+</i><wbr><kbd>R</kbd></span></td><td>Reply all</td></tr><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>F</kbd></span></td><td><b>Forward</b> (not find!)</td></tr><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>E</kbd></span> or <kbd>F3</kbd></td><td>Search</td></tr><tr><td><span class="combo"><kbd>Alt</kbd><i>+</i><wbr><kbd>S</kbd></span> or <span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>Enter</kbd></span></td><td>Send</td></tr><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>K</kbd></span></td><td>Check / resolve names in To:</td></tr><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>Q</kbd></span> / <span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>U</kbd></span></td><td>Mark read / unread</td></tr><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>Shift</kbd><i>+</i><wbr><kbd>V</kbd></span></td><td>Move to folder</td></tr><tr><td><kbd>Insert</kbd></td><td>Flag / unflag (classic)</td></tr><tr><td><kbd>Delete</kbd> / <span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>D</kbd></span></td><td>Delete</td></tr><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>.</kbd></span> / <span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>,</kbd></span></td><td>Next / previous message (in an open message)</td></tr><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>Shift</kbd><i>+</i><wbr><kbd>A</kbd></span></td><td>New appointment</td></tr><tr><td><kbd>↑</kbd> <kbd>↓</kbd> / <kbd>Enter</kbd></td><td>Move through list / open message</td></tr></tbody></table></section><section><p><b>Quick Steps</b> (classic Outlook, Home tab): one-click or <span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>Shift</kbd><i>+</i><wbr><kbd>1…9</kbd></span> actions like "forward to SDP mailbox and move to Done". Set up the ones you do every day.</p></section><section><p><b>Quick Parts / My Templates</b>: save standard replies and insert them in two keystrokes.</p></section><section><h2>Excel — data entry essentials</h2><table><tbody><tr><td><kbd>Tab</kbd> / <kbd>Enter</kbd></td><td>Confirm and move right / down</td></tr><tr><td><span class="combo"><kbd>Shift</kbd><i>+</i><wbr><kbd>Tab</kbd></span> / <span class="combo"><kbd>Shift</kbd><i>+</i><wbr><kbd>Enter</kbd></span></td><td>Confirm and move left / up</td></tr><tr><td><kbd>F2</kbd></td><td>Edit cell (cursor at end)</td></tr><tr><td><kbd>Esc</kbd></td><td>Cancel the edit</td></tr><tr><td><span class="combo"><kbd>Alt</kbd><i>+</i><wbr><kbd>Enter</kbd></span></td><td>New line <em>inside</em> a cell</td></tr><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>Enter</kbd></span></td><td>Put the same entry in <b>every selected cell</b></td></tr><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>D</kbd></span> / <span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>R</kbd></span></td><td>Fill down / right from the cell above / left</td></tr><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>&#x27;</kbd></span></td><td>Copy formula from cell above</td></tr><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>Shift</kbd><i>+</i><wbr><kbd>&quot;</kbd></span></td><td>Copy value from cell above</td></tr><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>;</kbd></span> / <span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>Shift</kbd><i>+</i><wbr><kbd>;</kbd></span></td><td>Today's date / current time</td></tr><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>E</kbd></span></td><td>Flash Fill (Excel guesses the pattern — split names, etc.)</td></tr><tr><td><span class="combo"><kbd>Alt</kbd><i>+</i><wbr><kbd>↓</kbd></span></td><td>Pick from values already in the column / dropdown</td></tr><tr><td><kbd>F4</kbd></td><td>Repeat last action (or toggle <kbd>$</kbd> refs while editing a formula)</td></tr></tbody></table></section><section><h3>Moving &amp; selecting</h3><table><tbody><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>arrow</kbd></span></td><td>Jump to edge of data</td></tr><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>Shift</kbd><i>+</i><wbr><kbd>arrow</kbd></span></td><td>Select to edge of data</td></tr><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>Home</kbd></span> / <span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>End</kbd></span></td><td>A1 / last used cell</td></tr><tr><td><span class="combo"><kbd>Shift</kbd><i>+</i><wbr><kbd>Space</kbd></span> / <span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>Space</kbd></span></td><td>Select row / column</td></tr><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>A</kbd></span></td><td>Select current data region (again = whole sheet)</td></tr><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>PgUp</kbd></span> / <span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>PgDn</kbd></span></td><td>Previous / next sheet</td></tr><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>G</kbd></span> or <kbd>F5</kbd></td><td>Go to a cell reference</td></tr></tbody></table></section><section><h3>Rows, tables, filters</h3><table><tbody><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>Shift</kbd><i>+</i><wbr><kbd>+</kbd></span></td><td>Insert row/column/cells</td></tr><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>-</kbd></span></td><td>Delete row/column/cells</td></tr><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>T</kbd></span></td><td>Make a table</td></tr><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>Shift</kbd><i>+</i><wbr><kbd>L</kbd></span></td><td>Filters on / off</td></tr><tr><td><span class="combo"><kbd>Alt</kbd><i>+</i><wbr><kbd>↓</kbd></span> (on a header)</td><td>Open filter menu</td></tr><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>1</kbd></span></td><td>Format cells</td></tr><tr><td><span class="combo"><kbd>Alt</kbd><i>+</i><wbr><kbd>=</kbd></span></td><td>AutoSum</td></tr><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>H</kbd></span></td><td>Find &amp; replace</td></tr></tbody></table></section><section><h2>Word — a few that pay off</h2><table><tbody><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>Shift</kbd><i>+</i><wbr><kbd>V</kbd></span></td><td>Paste text only (current Microsoft 365)</td></tr><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>Shift</kbd><i>+</i><wbr><kbd>C</kbd></span> / <span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>Shift</kbd><i>+</i><wbr><kbd>V</kbd></span></td><td>Copy / paste formatting (older Word)</td></tr><tr><td><span class="combo"><kbd>Shift</kbd><i>+</i><wbr><kbd>F3</kbd></span></td><td>Change case</td></tr><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>Space</kbd></span></td><td>Clear character formatting</td></tr><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>Alt</kbd><i>+</i><wbr><kbd>1/2/3</kbd></span></td><td>Heading 1/2/3</td></tr><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>Enter</kbd></span></td><td>Page break</td></tr><tr><td><kbd>F7</kbd></td><td>Spell check</td></tr><tr><td><kbd>F12</kbd></td><td>Save As</td></tr><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>G</kbd></span></td><td>Go to page</td></tr></tbody></table></section></div></div>
+</body>
+</html>

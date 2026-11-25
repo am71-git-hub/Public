@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GNOME Desktop (Ubuntu default)</title>
+<style>
+/* Monochrome by design: made for a black & white laser printer.
+   No gradients, no colour, no grey fills (they print as dither dots).
+   Hierarchy comes from weight, size, borders and italics only. */
+:root {
+  --paper: #FFFFFF; --ink: #000000; --rule: #000000; --desk: #E6E6E6; --toolbar: #333333;
+  --mono: ui-monospace, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+  --sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { --desk: #161616; --toolbar: #BBBBBB; }
+}
+:root[data-theme="dark"] { --desk: #161616; --toolbar: #BBBBBB; }
+@page { size: letter landscape; margin: 0.3in; }
+* { box-sizing: border-box; }
+html, body { margin: 0; background: var(--desk); color: var(--ink); font-family: var(--sans); }
+body { padding: 16px; }
+.toolbar { max-width: 10.4in; margin: 0 auto 12px; display: flex; gap: 12px; align-items: center;
+  font-size: 14px; color: var(--toolbar); flex-wrap: wrap; }
+.toolbar button { font: inherit; padding: 6px 14px; border: 1px solid #000; border-radius: 6px;
+  background: #fff; color: #000; cursor: pointer; }
+.toolbar a { color: inherit; }
+.page { width: 10.4in; margin: 0 auto 24px; background: var(--paper); color: var(--ink); padding: 0;
+  box-shadow: 0 1px 4px rgba(0,0,0,.25); font-size: var(--fs); line-height: 1.28;
+  display: flex; flex-direction: column; }
+.page.fit { height: 7.9in; overflow: hidden; }
+.head { display: flex; align-items: baseline; justify-content: space-between; gap: 1em;
+  border-bottom: 2.5pt solid var(--ink); padding: .1em .1em .25em; margin: 0 .6em; }
+.head h1 { margin: 0; font-size: 1.6em; letter-spacing: -.01em; font-weight: 800; }
+.head span { font-family: var(--mono); font-size: .85em; white-space: nowrap; }
+.intro { padding: .35em .7em 0; font-style: italic; }
+.intro p { margin: 0 0 .3em; }
+section:first-child h2 { margin-top: .1em; }
+.cols { column-count: var(--cols); column-gap: 1.3em; column-rule: .5pt solid var(--rule);
+  padding: .45em .7em .5em; }
+.page.fit .cols { flex: 1; min-height: 0; column-fill: auto; }
+section { break-inside: auto; }
+h2 { font-size: 1.12em; font-weight: 800; text-transform: uppercase; letter-spacing: .03em;
+  margin: .7em 0 .25em; padding-bottom: .1em; border-bottom: 1.5pt solid var(--ink); break-after: avoid; break-inside: avoid; }
+h3 { font-size: 1em; font-weight: 700; margin: .45em 0 .15em; text-decoration: underline;
+  text-underline-offset: .15em; break-after: avoid; break-inside: avoid; }
+p { margin: .2em 0 .35em; }
+p.note { border-left: 2.5pt solid var(--ink); padding-left: .5em; font-style: italic; }
+ul, ol { margin: .15em 0 .35em; padding-left: 1.3em; }
+li { margin: .08em 0; }
+table { width: 100%; table-layout: fixed; border-collapse: collapse; margin: .1em 0 .3em; }
+tr { break-inside: avoid; }
+td, th { overflow-wrap: break-word; vertical-align: top; padding: .16em .3em .16em 0; border-bottom: .75pt dotted var(--rule); text-align: left; }
+th { font-size: .8em; text-transform: uppercase; letter-spacing: .04em; font-weight: 700;
+  border-bottom: 1pt solid var(--rule); }
+td:first-child { width: 42%; }
+table.three td:first-child { width: 34%; }
+td:nth-child(3) { font-style: italic; }
+kbd, code { font-family: var(--mono); font-size: .9em; white-space: nowrap; color: var(--ink); }
+kbd { display: inline-block; padding: 0 .3em; border: .75pt solid var(--ink); border-bottom-width: 1.75pt;
+  border-radius: 3px; background: var(--paper); line-height: 1.25; font-weight: 600; }
+code { padding: 0 .1em; white-space: normal; word-break: break-word; border-bottom: .75pt dashed var(--ink); }
+.combo { white-space: normal; }
+.combo i { font-style: normal; padding: 0 .12em; font-size: .85em; }
+pre { font-family: var(--mono); font-size: .82em; border: .75pt solid var(--ink); padding: .4em .5em;
+  margin: .2em 0 .4em; white-space: pre-wrap; break-inside: avoid; }
+.big td { padding: .35em .5em .35em 0; }
+@media print {
+  html, body { background: #fff; padding: 0; }
+  .toolbar { display: none; }
+  .page { box-shadow: none; margin: 0; break-after: page; }
+  .page:last-child { break-after: auto; }
+}
+@media screen and (max-width: 10.9in) {
+  body { overflow-x: auto; }
+}
+</style>
+</head>
+<body>
+<div class="toolbar"><button onclick="window.print()">Print</button><span>Letter, landscape · margins: Default · scale 100% · black &amp; white is fine</span><a href="index.html">all sheets</a></div>
+<div class="page fit " style="--fs:11.0pt;--cols:3"><div class="head"><h1>GNOME Desktop (Ubuntu default)</h1><span>Linux · shortcuts</span></div><div class="intro"><p><kbd>Super</kbd> = the Windows key. Check or change everything in <b>Settings → Keyboard → View and Customize Shortcuts</b>. Other desktops (KDE, XFCE, Cinnamon) differ — but <span class="combo"><kbd>Alt</kbd><i>+</i><wbr><kbd>Tab</kbd></span>, <kbd>Super</kbd>, and <span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>Alt</kbd><i>+</i><wbr><kbd>T</kbd></span> are near-universal.</p></div><div class="cols"><section><h2>Launching &amp; switching</h2><table><tbody><tr><td><kbd>Super</kbd></td><td>Activities overview — start typing to launch anything</td></tr><tr><td><span class="combo"><kbd>Super</kbd><i>+</i><wbr><kbd>A</kbd></span></td><td>App grid</td></tr><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>Alt</kbd><i>+</i><wbr><kbd>T</kbd></span></td><td>Terminal (Ubuntu)</td></tr><tr><td><span class="combo"><kbd>Super</kbd><i>+</i><wbr><kbd>1…9</kbd></span></td><td>Open / switch to dock app #n</td></tr><tr><td><span class="combo"><kbd>Super</kbd><i>+</i><wbr><kbd>Shift</kbd><i>+</i><wbr><kbd>1…9</kbd></span></td><td>New window of dock app #n (Ubuntu dock)</td></tr><tr><td><span class="combo"><kbd>Alt</kbd><i>+</i><wbr><kbd>Tab</kbd></span> / <span class="combo"><kbd>Alt</kbd><i>+</i><wbr><kbd>Shift</kbd><i>+</i><wbr><kbd>Tab</kbd></span></td><td>Switch applications</td></tr><tr><td><span class="combo"><kbd>Alt</kbd><i>+</i><wbr><kbd>`</kbd></span></td><td>Switch windows <b>of the same app</b></td></tr><tr><td><span class="combo"><kbd>Super</kbd><i>+</i><wbr><kbd>Tab</kbd></span></td><td>Switch applications (same as Alt+Tab)</td></tr><tr><td><span class="combo"><kbd>Alt</kbd><i>+</i><wbr><kbd>F2</kbd></span></td><td>Run a command</td></tr><tr><td><span class="combo"><kbd>Alt</kbd><i>+</i><wbr><kbd>F4</kbd></span></td><td>Close window</td></tr><tr><td><span class="combo"><kbd>Super</kbd><i>+</i><wbr><kbd>L</kbd></span></td><td>Lock screen</td></tr></tbody></table></section><section><h2>Windows</h2><table><tbody><tr><td><span class="combo"><kbd>Super</kbd><i>+</i><wbr><kbd>←</kbd></span> / <kbd>→</kbd></td><td>Snap left / right half</td></tr><tr><td><span class="combo"><kbd>Super</kbd><i>+</i><wbr><kbd>↑</kbd></span> / <kbd>↓</kbd></td><td>Maximise / restore</td></tr><tr><td><span class="combo"><kbd>Super</kbd><i>+</i><wbr><kbd>H</kbd></span></td><td>Hide (minimise)</td></tr><tr><td><span class="combo"><kbd>Super</kbd><i>+</i><wbr><kbd>Shift</kbd><i>+</i><wbr><kbd>←/→</kbd></span></td><td>Move window to other monitor</td></tr><tr><td><span class="combo"><kbd>Super</kbd><i>+</i><wbr><kbd>D</kbd></span></td><td>Show desktop (Ubuntu)</td></tr><tr><td><span class="combo"><kbd>Alt</kbd><i>+</i><wbr><kbd>F7</kbd></span> / <span class="combo"><kbd>Alt</kbd><i>+</i><wbr><kbd>F8</kbd></span></td><td>Move / resize with keyboard</td></tr><tr><td><span class="combo"><kbd>Alt</kbd><i>+</i><wbr><kbd>Space</kbd></span></td><td>Window menu</td></tr><tr><td><span class="combo"><kbd>Super</kbd><i>+</i><wbr><kbd>drag</kbd></span></td><td>Move a window from anywhere inside it</td></tr></tbody></table></section><section><h2>Workspaces</h2><table><tbody><tr><td><span class="combo"><kbd>Super</kbd><i>+</i><wbr><kbd>PgUp</kbd></span> / <kbd>PgDn</kbd></td><td>Previous / next workspace</td></tr><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>Alt</kbd><i>+</i><wbr><kbd>←/→</kbd></span></td><td>Previous / next workspace (common default)</td></tr><tr><td><span class="combo"><kbd>Super</kbd><i>+</i><wbr><kbd>Shift</kbd><i>+</i><wbr><kbd>PgUp/PgDn</kbd></span></td><td>Move window to previous / next workspace</td></tr><tr><td><span class="combo"><kbd>Super</kbd><i>+</i><wbr><kbd>Home</kbd></span> / <kbd>End</kbd></td><td>First / last workspace</td></tr></tbody></table></section><section><h2>Screenshots &amp; misc</h2><table><tbody><tr><td><kbd>Print</kbd></td><td>Screenshot tool (region / window / screen; saves + copies)</td></tr><tr><td><span class="combo"><kbd>Shift</kbd><i>+</i><wbr><kbd>Print</kbd></span></td><td>Full-screen screenshot</td></tr><tr><td><span class="combo"><kbd>Alt</kbd><i>+</i><wbr><kbd>Print</kbd></span></td><td>Window screenshot</td></tr><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>Alt</kbd><i>+</i><wbr><kbd>Shift</kbd><i>+</i><wbr><kbd>R</kbd></span></td><td>Screen recording toggle</td></tr><tr><td><span class="combo"><kbd>Super</kbd><i>+</i><wbr><kbd>V</kbd></span></td><td>Notification list / calendar</td></tr><tr><td><span class="combo"><kbd>Super</kbd><i>+</i><wbr><kbd>.</kbd></span> or <span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>.</kbd></span></td><td>Emoji picker (GTK text fields)</td></tr><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>Shift</kbd><i>+</i><wbr><kbd>U</kbd></span>, hex, <kbd>Space</kbd></td><td>Type any Unicode character</td></tr><tr><td><span class="combo"><kbd>Alt</kbd><i>+</i><wbr><kbd>F2</kbd></span>, <kbd>r</kbd>, <kbd>Enter</kbd></td><td>Restart GNOME Shell (X11 only)</td></tr></tbody></table></section><section><h2>Files (Nautilus)</h2><table><tbody><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>L</kbd></span></td><td>Type a path</td></tr><tr><td><span class="combo"><kbd>Alt</kbd><i>+</i><wbr><kbd>↑</kbd></span> / <kbd>Backspace</kbd>*</td><td>Parent folder</td></tr><tr><td><span class="combo"><kbd>Alt</kbd><i>+</i><wbr><kbd>←</kbd></span> / <kbd>→</kbd></td><td>Back / forward</td></tr><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>H</kbd></span></td><td>Show / hide hidden files</td></tr><tr><td><kbd>F2</kbd></td><td>Rename</td></tr><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>Shift</kbd><i>+</i><wbr><kbd>N</kbd></span></td><td>New folder</td></tr><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>1</kbd></span> / <span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>2</kbd></span></td><td>List / grid view</td></tr><tr><td>Just type</td><td>Search in current folder</td></tr></tbody></table></section><section><h2>Make your own</h2><p>Settings → Keyboard → Custom Shortcuts → <b>+</b>. Examples:</p></section><section><table><tbody><tr><td><span class="combo"><kbd>Super</kbd><i>+</i><wbr><kbd>Return</kbd></span></td><td><code>alacritty</code></td></tr><tr><td><span class="combo"><kbd>Super</kbd><i>+</i><wbr><kbd>Shift</kbd><i>+</i><wbr><kbd>R</kbd></span></td><td><code>alacritty -e ssh -t myserver tmux new -A -s main</code></td></tr><tr><td><span class="combo"><kbd>Super</kbd><i>+</i><wbr><kbd>B</kbd></span></td><td><code>firefox</code></td></tr></tbody></table></section></div></div>
+</body>
+</html>

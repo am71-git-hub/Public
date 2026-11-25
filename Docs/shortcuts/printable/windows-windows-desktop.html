@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Windows Desktop — Windows 10 / 11</title>
+<style>
+/* Monochrome by design: made for a black & white laser printer.
+   No gradients, no colour, no grey fills (they print as dither dots).
+   Hierarchy comes from weight, size, borders and italics only. */
+:root {
+  --paper: #FFFFFF; --ink: #000000; --rule: #000000; --desk: #E6E6E6; --toolbar: #333333;
+  --mono: ui-monospace, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+  --sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { --desk: #161616; --toolbar: #BBBBBB; }
+}
+:root[data-theme="dark"] { --desk: #161616; --toolbar: #BBBBBB; }
+@page { size: letter landscape; margin: 0.3in; }
+* { box-sizing: border-box; }
+html, body { margin: 0; background: var(--desk); color: var(--ink); font-family: var(--sans); }
+body { padding: 16px; }
+.toolbar { max-width: 10.4in; margin: 0 auto 12px; display: flex; gap: 12px; align-items: center;
+  font-size: 14px; color: var(--toolbar); flex-wrap: wrap; }
+.toolbar button { font: inherit; padding: 6px 14px; border: 1px solid #000; border-radius: 6px;
+  background: #fff; color: #000; cursor: pointer; }
+.toolbar a { color: inherit; }
+.page { width: 10.4in; margin: 0 auto 24px; background: var(--paper); color: var(--ink); padding: 0;
+  box-shadow: 0 1px 4px rgba(0,0,0,.25); font-size: var(--fs); line-height: 1.28;
+  display: flex; flex-direction: column; }
+.page.fit { height: 7.9in; overflow: hidden; }
+.head { display: flex; align-items: baseline; justify-content: space-between; gap: 1em;
+  border-bottom: 2.5pt solid var(--ink); padding: .1em .1em .25em; margin: 0 .6em; }
+.head h1 { margin: 0; font-size: 1.6em; letter-spacing: -.01em; font-weight: 800; }
+.head span { font-family: var(--mono); font-size: .85em; white-space: nowrap; }
+.intro { padding: .35em .7em 0; font-style: italic; }
+.intro p { margin: 0 0 .3em; }
+section:first-child h2 { margin-top: .1em; }
+.cols { column-count: var(--cols); column-gap: 1.3em; column-rule: .5pt solid var(--rule);
+  padding: .45em .7em .5em; }
+.page.fit .cols { flex: 1; min-height: 0; column-fill: auto; }
+section { break-inside: auto; }
+h2 { font-size: 1.12em; font-weight: 800; text-transform: uppercase; letter-spacing: .03em;
+  margin: .7em 0 .25em; padding-bottom: .1em; border-bottom: 1.5pt solid var(--ink); break-after: avoid; break-inside: avoid; }
+h3 { font-size: 1em; font-weight: 700; margin: .45em 0 .15em; text-decoration: underline;
+  text-underline-offset: .15em; break-after: avoid; break-inside: avoid; }
+p { margin: .2em 0 .35em; }
+p.note { border-left: 2.5pt solid var(--ink); padding-left: .5em; font-style: italic; }
+ul, ol { margin: .15em 0 .35em; padding-left: 1.3em; }
+li { margin: .08em 0; }
+table { width: 100%; table-layout: fixed; border-collapse: collapse; margin: .1em 0 .3em; }
+tr { break-inside: avoid; }
+td, th { overflow-wrap: break-word; vertical-align: top; padding: .16em .3em .16em 0; border-bottom: .75pt dotted var(--rule); text-align: left; }
+th { font-size: .8em; text-transform: uppercase; letter-spacing: .04em; font-weight: 700;
+  border-bottom: 1pt solid var(--rule); }
+td:first-child { width: 42%; }
+table.three td:first-child { width: 34%; }
+td:nth-child(3) { font-style: italic; }
+kbd, code { font-family: var(--mono); font-size: .9em; white-space: nowrap; color: var(--ink); }
+kbd { display: inline-block; padding: 0 .3em; border: .75pt solid var(--ink); border-bottom-width: 1.75pt;
+  border-radius: 3px; background: var(--paper); line-height: 1.25; font-weight: 600; }
+code { padding: 0 .1em; white-space: normal; word-break: break-word; border-bottom: .75pt dashed var(--ink); }
+.combo { white-space: normal; }
+.combo i { font-style: normal; padding: 0 .12em; font-size: .85em; }
+pre { font-family: var(--mono); font-size: .82em; border: .75pt solid var(--ink); padding: .4em .5em;
+  margin: .2em 0 .4em; white-space: pre-wrap; break-inside: avoid; }
+.big td { padding: .35em .5em .35em 0; }
+@media print {
+  html, body { background: #fff; padding: 0; }
+  .toolbar { display: none; }
+  .page { box-shadow: none; margin: 0; break-after: page; }
+  .page:last-child { break-after: auto; }
+}
+@media screen and (max-width: 10.9in) {
+  body { overflow-x: auto; }
+}
+</style>
+</head>
+<body>
+<div class="toolbar"><button onclick="window.print()">Print</button><span>Letter, landscape · margins: Default · scale 100% · black &amp; white is fine</span><a href="index.html">all sheets</a></div>
+<div class="page fit " style="--fs:7.5pt;--cols:4"><div class="head"><h1>Windows Desktop — Windows 10 / 11</h1><span>Windows · shortcuts</span></div><div class="intro"><p>Window management, the Win key, dialog boxes, File Explorer, and Run commands a help desk tech should know.</p></div><div class="cols"><section><h2>Switching apps &amp; windows</h2><table><tbody><tr><td><span class="combo"><kbd>Alt</kbd><i>+</i><wbr><kbd>Tab</kbd></span></td><td>Switch window (hold <kbd>Alt</kbd>, tap <kbd>Tab</kbd> to go further)</td></tr><tr><td><span class="combo"><kbd>Alt</kbd><i>+</i><wbr><kbd>Shift</kbd><i>+</i><wbr><kbd>Tab</kbd></span></td><td>Switch backwards</td></tr><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>Alt</kbd><i>+</i><wbr><kbd>Tab</kbd></span></td><td>Sticky switcher — stays open, pick with arrows + <kbd>Enter</kbd></td></tr><tr><td><span class="combo"><kbd>Win</kbd><i>+</i><wbr><kbd>Tab</kbd></span></td><td>Task View (all windows + virtual desktops)</td></tr><tr><td><span class="combo"><kbd>Win</kbd><i>+</i><wbr><kbd>1…9</kbd></span></td><td>Open / switch to pinned taskbar app #n (press again to cycle its windows)</td></tr><tr><td><span class="combo"><kbd>Win</kbd><i>+</i><wbr><kbd>Shift</kbd><i>+</i><wbr><kbd>1…9</kbd></span></td><td>Open a <b>new</b> window of app #n</td></tr><tr><td><span class="combo"><kbd>Win</kbd><i>+</i><wbr><kbd>Alt</kbd><i>+</i><wbr><kbd>1…9</kbd></span></td><td>Jump list (recent files) for app #n</td></tr><tr><td><span class="combo"><kbd>Win</kbd><i>+</i><wbr><kbd>T</kbd></span></td><td>Cycle through taskbar icons (<kbd>Enter</kbd> to open)</td></tr><tr><td><span class="combo"><kbd>Alt</kbd><i>+</i><wbr><kbd>Esc</kbd></span></td><td>Cycle windows in the order they were opened</td></tr></tbody></table></section><section><h2>Arranging windows</h2><table><tbody><tr><td><span class="combo"><kbd>Win</kbd><i>+</i><wbr><kbd>←</kbd></span> / <kbd>→</kbd></td><td>Snap to left / right half</td></tr><tr><td><span class="combo"><kbd>Win</kbd><i>+</i><wbr><kbd>↑</kbd></span></td><td>Maximise (or snap to top half after a side snap)</td></tr><tr><td><span class="combo"><kbd>Win</kbd><i>+</i><wbr><kbd>↓</kbd></span></td><td>Restore / minimise</td></tr><tr><td><span class="combo"><kbd>Win</kbd><i>+</i><wbr><kbd>Z</kbd></span></td><td>Snap layouts menu (Windows 11)</td></tr><tr><td><span class="combo"><kbd>Win</kbd><i>+</i><wbr><kbd>Shift</kbd><i>+</i><wbr><kbd>←/→</kbd></span></td><td>Move window to the other monitor</td></tr><tr><td><span class="combo"><kbd>Win</kbd><i>+</i><wbr><kbd>Home</kbd></span></td><td>Minimise everything except the active window</td></tr><tr><td><span class="combo"><kbd>Win</kbd><i>+</i><wbr><kbd>D</kbd></span></td><td>Show desktop (press again to restore)</td></tr><tr><td><span class="combo"><kbd>Win</kbd><i>+</i><wbr><kbd>M</kbd></span> / <span class="combo"><kbd>Win</kbd><i>+</i><wbr><kbd>Shift</kbd><i>+</i><wbr><kbd>M</kbd></span></td><td>Minimise all / restore</td></tr><tr><td><span class="combo"><kbd>Alt</kbd><i>+</i><wbr><kbd>Space</kbd></span></td><td>Window menu (then <kbd>N</kbd> minimise, <kbd>X</kbd> maximise, <kbd>M</kbd> move with arrows)</td></tr><tr><td><span class="combo"><kbd>Alt</kbd><i>+</i><wbr><kbd>F4</kbd></span></td><td>Close window (on the desktop: shut down dialog)</td></tr></tbody></table></section><section><h2>Virtual desktops</h2><table><tbody><tr><td><span class="combo"><kbd>Win</kbd><i>+</i><wbr><kbd>Ctrl</kbd><i>+</i><wbr><kbd>D</kbd></span></td><td>New desktop</td></tr><tr><td><span class="combo"><kbd>Win</kbd><i>+</i><wbr><kbd>Ctrl</kbd><i>+</i><wbr><kbd>←/→</kbd></span></td><td>Switch desktop</td></tr><tr><td><span class="combo"><kbd>Win</kbd><i>+</i><wbr><kbd>Ctrl</kbd><i>+</i><wbr><kbd>F4</kbd></span></td><td>Close current desktop</td></tr></tbody></table></section><section><p>Idea: desktop 1 = tickets &amp; Teams, desktop 2 = admin tools / remote sessions.</p></section><section><h2>The Win key</h2><table><tbody><tr><td><kbd>Win</kbd> then type</td><td>Search / launch anything (apps, settings, files)</td></tr><tr><td><span class="combo"><kbd>Win</kbd><i>+</i><wbr><kbd>E</kbd></span></td><td>File Explorer</td></tr><tr><td><span class="combo"><kbd>Win</kbd><i>+</i><wbr><kbd>R</kbd></span></td><td>Run box</td></tr><tr><td><span class="combo"><kbd>Win</kbd><i>+</i><wbr><kbd>I</kbd></span></td><td>Settings</td></tr><tr><td><span class="combo"><kbd>Win</kbd><i>+</i><wbr><kbd>X</kbd></span></td><td>Power-user menu (Device Manager, Terminal, Disk Mgmt… — letters jump)</td></tr><tr><td><span class="combo"><kbd>Win</kbd><i>+</i><wbr><kbd>L</kbd></span></td><td><b>Lock</b></td></tr><tr><td><span class="combo"><kbd>Win</kbd><i>+</i><wbr><kbd>V</kbd></span></td><td>Clipboard history</td></tr><tr><td><span class="combo"><kbd>Win</kbd><i>+</i><wbr><kbd>Shift</kbd><i>+</i><wbr><kbd>S</kbd></span></td><td>Snip a region to clipboard</td></tr><tr><td><span class="combo"><kbd>Win</kbd><i>+</i><wbr><kbd>PrtScn</kbd></span></td><td>Full screenshot saved to Pictures\Screenshots</td></tr><tr><td><span class="combo"><kbd>Win</kbd><i>+</i><wbr><kbd>.</kbd></span></td><td>Emoji &amp; symbols panel</td></tr><tr><td><span class="combo"><kbd>Win</kbd><i>+</i><wbr><kbd>H</kbd></span></td><td>Voice typing</td></tr><tr><td><span class="combo"><kbd>Win</kbd><i>+</i><wbr><kbd>A</kbd></span></td><td>Quick settings (Wi-Fi, volume…)</td></tr><tr><td><span class="combo"><kbd>Win</kbd><i>+</i><wbr><kbd>N</kbd></span></td><td>Notifications / calendar</td></tr><tr><td><span class="combo"><kbd>Win</kbd><i>+</i><wbr><kbd>Ctrl</kbd><i>+</i><wbr><kbd>Enter</kbd></span></td><td>Narrator on/off (know this in case a user turns it on by accident)</td></tr><tr><td><span class="combo"><kbd>Win</kbd><i>+</i><wbr><kbd>+</kbd></span> / <span class="combo"><kbd>Win</kbd><i>+</i><wbr><kbd>Esc</kbd></span></td><td>Magnifier on / off (same)</td></tr><tr><td><span class="combo"><kbd>Win</kbd><i>+</i><wbr><kbd>Ctrl</kbd><i>+</i><wbr><kbd>Shift</kbd><i>+</i><wbr><kbd>B</kbd></span></td><td>Restart the graphics driver (black/frozen screen fix)</td></tr><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>Shift</kbd><i>+</i><wbr><kbd>Esc</kbd></span></td><td>Task Manager directly</td></tr><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>Alt</kbd><i>+</i><wbr><kbd>Del</kbd></span></td><td>Security screen (lock, switch user, Task Manager)</td></tr></tbody></table></section><section><h2>Dialog boxes &amp; forms (old-style Windows apps)</h2><table><tbody><tr><td><kbd>Tab</kbd> / <span class="combo"><kbd>Shift</kbd><i>+</i><wbr><kbd>Tab</kbd></span></td><td>Next / previous control</td></tr><tr><td><kbd>Enter</kbd></td><td>Default button (usually OK)</td></tr><tr><td><kbd>Esc</kbd></td><td>Cancel</td></tr><tr><td><kbd>Space</kbd></td><td>Press focused button / toggle checkbox</td></tr><tr><td><span class="combo"><kbd>Alt</kbd><i>+</i><wbr><kbd>underlined letter</kbd></span></td><td>Jump to that control (press <kbd>Alt</kbd> to reveal underlines)</td></tr><tr><td>Arrow keys</td><td>Move within a radio group or list</td></tr><tr><td><span class="combo"><kbd>Alt</kbd><i>+</i><wbr><kbd>↓</kbd></span> or <kbd>F4</kbd></td><td>Open a dropdown</td></tr><tr><td>Type letters</td><td>Jump to matching item in a list</td></tr><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>Tab</kbd></span> / <span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>Shift</kbd><i>+</i><wbr><kbd>Tab</kbd></span></td><td>Next / previous tab in a tabbed dialog</td></tr></tbody></table></section><section><h2>File Explorer</h2><table><tbody><tr><td><span class="combo"><kbd>Alt</kbd><i>+</i><wbr><kbd>D</kbd></span> or <span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>L</kbd></span></td><td>Address bar (type a path like <code>\\server\share</code> or <code>%appdata%</code>)</td></tr><tr><td><span class="combo"><kbd>Alt</kbd><i>+</i><wbr><kbd>↑</kbd></span></td><td>Up one folder</td></tr><tr><td><span class="combo"><kbd>Alt</kbd><i>+</i><wbr><kbd>←</kbd></span> / <kbd>→</kbd></td><td>Back / forward</td></tr><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>E</kbd></span> or <span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>F</kbd></span></td><td>Search box</td></tr><tr><td><kbd>F2</kbd></td><td>Rename</td></tr><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>Shift</kbd><i>+</i><wbr><kbd>N</kbd></span></td><td>New folder</td></tr><tr><td><span class="combo"><kbd>Alt</kbd><i>+</i><wbr><kbd>Enter</kbd></span></td><td>Properties</td></tr><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>Shift</kbd><i>+</i><wbr><kbd>C</kbd></span> (Win 11)</td><td>Copy the file's full path</td></tr><tr><td><span class="combo"><kbd>Shift</kbd><i>+</i><wbr><kbd>right-click</kbd></span></td><td>Extended menu incl. "Copy as path" (Win 10)</td></tr><tr><td><span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>mouse wheel</kbd></span></td><td>Change icon size / view</td></tr><tr><td><span class="combo"><kbd>Shift</kbd><i>+</i><wbr><kbd>Delete</kbd></span></td><td>Delete permanently (no Recycle Bin)</td></tr></tbody></table></section><section><h2>Run box commands (<span class="combo"><kbd>Win</kbd><i>+</i><wbr><kbd>R</kbd></span>) — help desk favourites</h2><table><tbody><tr><td><kbd>cmd</kbd> / <kbd>powershell</kbd></td><td>Command prompt / PowerShell (<span class="combo"><kbd>Ctrl</kbd><i>+</i><wbr><kbd>Shift</kbd><i>+</i><wbr><kbd>Enter</kbd></span> = run as admin)</td></tr><tr><td><kbd>control</kbd></td><td>Control Panel</td></tr><tr><td><kbd>appwiz.cpl</kbd></td><td>Programs and Features (uninstall)</td></tr><tr><td><kbd>ncpa.cpl</kbd></td><td>Network adapters</td></tr><tr><td><kbd>devmgmt.msc</kbd></td><td>Device Manager</td></tr><tr><td><kbd>services.msc</kbd></td><td>Services</td></tr><tr><td><kbd>eventvwr</kbd></td><td>Event Viewer</td></tr><tr><td><kbd>compmgmt.msc</kbd></td><td>Computer Management</td></tr><tr><td><kbd>diskmgmt.msc</kbd></td><td>Disk Management</td></tr><tr><td><kbd>lusrmgr.msc</kbd></td><td>Local users &amp; groups</td></tr><tr><td><code>printmanagement.msc</code></td><td>Print Management (Pro/Enterprise)</td></tr><tr><td><kbd>dsa.msc</kbd></td><td>Active Directory Users &amp; Computers (if RSAT installed)</td></tr><tr><td><kbd>mstsc</kbd></td><td>Remote Desktop</td></tr><tr><td><kbd>msinfo32</kbd></td><td>System info (model, serial-ish, RAM, BIOS)</td></tr><tr><td><kbd>winver</kbd></td><td>Windows version / build</td></tr><tr><td><kbd>taskmgr</kbd></td><td>Task Manager</td></tr><tr><td><kbd>%temp%</kbd></td><td>Temp folder</td></tr><tr><td><code>\\computername\c$</code></td><td>Admin share on a remote PC (with rights)</td></tr></tbody></table></section><section><p>Most of these also work typed straight into the Start menu after pressing <kbd>Win</kbd>.</p></section></div></div>
+</body>
+</html>

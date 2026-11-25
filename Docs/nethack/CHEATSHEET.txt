@@ -1,0 +1,33 @@
+NETHACK CHEAT SHEET (default keys, vi movement)          cat CHEATSHEET.txt
+==============================================================================
+MOVE     y k u   capitals=run   G+dir run   _ travel   m+dir don't fight
+          \|/    . wait         F+dir force attack     count: 10s 20.
+         h-.-l
+          /|\    no diagonals through doorways
+         b j n   KICK = ^D (not k!)   loot = #loot   untrap = #untrap
+------------------------------------------------------------------------------
+LOOK     : under me   ; any tile   / what's this glyph   ^P old messages
+ITEMS    , pickup     i inventory  d drop    @ autopickup on/off (shops!)
+WIELD    w weapon (w- bare)        x swap    Q set quiver   f fire   t throw
+WEAR     W armor  T off            P ring/amulet  R off     A remove all
+USE      e eat    q drink   r read   z zap   a apply tool   Z cast   E engrave
+DUNGEON  s search (10s)   o open  c close   ^D kick   > down  < up   p pay
+META     S save+quit   O options   ?  help   & what does key do
+------------------------------------------------------------------------------
+EXTENDED #pray rescue(~1/1000T)  #offer sacrifice  #chat talk  #loot chest
+         #force pry lock  #enhance skills  #dip  #rub lamp  #untrap
+------------------------------------------------------------------------------
+SYMBOLS  ) weapon  [ armor  ! potion  ? scroll  / wand  = ring  " amulet
+         % food  ( tool  * gem  $ gold  + door/book  > < stairs  ^ trap
+         { fountain  _ altar  @ you  d f pet  a-zA-Z monsters  I unseen
+------------------------------------------------------------------------------
+STATUS   Dlvl depth | HP dead at 0 | Pw mana | AC LOWER=better | T turns
+HUNGER   Satiated > ok > Hungry(EAT NOW) > Weak > Fainting > dead
+FOOD     safe: rations, newt/rat/gecko/kobold/gnome/jackal/lichen corpses
+         never: pets, humans, kobold shamans, bats, corpses >50 turns old
+------------------------------------------------------------------------------
+PANIC    low HP / sick / starving -> #pray (once per crisis)
+         surrounded -> E - Elbereth (scares most)    stuck curse -> #pray
+RULES    lower AC better. wear everything. check BUC on altars before
+         wielding. don't descend hurt. shops: @ off, don't step on goods.
+==============================================================================
