@@ -42,6 +42,7 @@ Your progress (scores, missed questions, settings) is saved **in that browser on
 | 5 | [Run it all the time](tutorials/05-run-it-all-the-time.md) | Starting the server automatically (Linux, Windows, Mac) |
 | 6 | [Using the app](tutorials/06-using-the-app.md) | What every screen does, and how to study with it |
 | 7 | [Edit and rebuild](tutorials/07-edit-and-rebuild.md) | Changing questions or guides and rebuilding the page |
+| 8 | [Shut down and clean up](tutorials/08-shut-down-and-clean-up.md) | Stopping the server, removing auto-start, clearing saved progress |
 | ? | [Troubleshooting](tutorials/troubleshooting.md) | Voices, lost progress, blocked files, server problems |
 
 ## What's inside
